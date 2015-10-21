@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <script src ="/vendors/angular/angular.min.js" type="text/javascript"></script>
+    <script src ="/assets/scripts/app.min.js" type="text/javascript"></script>
+
+    <meta charset="UTF-8">
+    <title>Star Wars: The Game</title>
+</head>
+<h1>Star Wars: The Game</h1>
+    <div ng-controller="IndexController">
+        <p ng-show="luke.name">Your new cats name is: {{luke.name}}</p>
+        <p ng-hide="luke.name">Enter your new cat name!</p>
+
+            <form novalidate>
+                Name: <input type="text" ng-model="luke.name"/> <br/>
+                <input type="submit" ng-click="add(luke)" value = "Save"/>
+            </form>
+        <h4>Lukes</h4>
+        <ul>
+            <li ng-repeat="luke in lukes">{{luke.name}}
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
