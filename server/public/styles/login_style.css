@@ -1,38 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Play:400,700);
 
 body {
-  border: 16px solid white;
-  border-radius:26px;
-  -webkit-border-radius: 26px;
-  -moz-border-radius: 216px;
+  border: 26px solid #FFFCEE;
+  /*border-radius:26px;*/
+  -webkit-border-radius: 46px;
+  -moz-border-radius: 46px;
   background-image: url("/assets/images/noise.png");
   /*padding: 50px;*/
   font: 14px play, Helvetica, Arial, sans-serif;
 }
 h1{
-  font: 74px play, Helvetica, Arial, sans-serif;
+  font: 116px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
-  color: white;
+  color: #FFFCEE;
+  margin-bottom: 35px;
 }
 h2{
+  padding-top:85px;
   font: 54px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   margin: 0 250px;
+  color: #FFFCEE;
+}
+h4{
+  font: 46px play, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #FFFCEE;
+  margin-bottom: 15px;
+
+}
+#levels p{
+  font: 29px play, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #3A8BCA;
+  margin-top: 0;
 }
 
 .quote{
   font: 38px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
-  float:right;
+  /*float:right;*/
+  text-align: right;
   margin: 10px 200px;
+  color: #FFFCEE;
+  padding-bottom:29px;
 }
 .logs{
   font: 34px play, Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
   font-weight: bold;
   text-align: center;
   color: black;
@@ -44,7 +65,7 @@ h2{
 }
 .r-logs{
   font: 34px play, Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
   font-weight: bold;
   text-align: center;
   color: black;
@@ -88,13 +109,14 @@ input.login{
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 20px;
-  letter-spacing: 1px;
-  margin-bottom: 34px;
-  color: white;
-  background-color: black;
+  letter-spacing: 3px;
+  margin: 34px 0 25px;
+  color: #FFFCEE;
+  background-color: lawngreen;
 }
 .submit:hover{
-  color:lawngreen;
+  color:black;
+  background-color:#FFFCEE;
 }
 
 .register{
@@ -103,13 +125,14 @@ input.login{
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 20px;
-  letter-spacing: 1px;
-  margin-bottom: 34px;
-  color: white;
-  background-color: black;
+  letter-spacing: 3px;
+  margin: 34px 0 25px;
+  color: black;
+  background-color: red;
 }
 .register:hover{
-  color:lawngreen;
+  color:black;
+  background-color:#FFFCEE;
 }
 
 a  {
@@ -118,24 +141,25 @@ a  {
   color: lawngreen;
   text-decoration: none;
   margin-top: 34px;
+  letter-spacing: 5px;
 }
 a:hover {
-  color: black;
+  color: #FFFCEE;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color:    white;
+  color:    #FFFCEE;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color:   white;
+  color:   #FFFCEE;
   opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color:    white;
+  color:    #FFFCEE;
   opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:   white;
+  color:   #FFFCEE;
 }
 
 .logout{
@@ -147,13 +171,53 @@ a:hover {
   padding: 6px 30px;
   letter-spacing: 1px;
   margin: 34px 56px;
-  color: white;
+  color: #FFFCEE;
   background-color: lawngreen;
+}
+
+.logout:hover{
+  color:black;
+}
+.loginhome{
+  float:right;
+  font: 24px play, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 6px 30px;
+  letter-spacing: 1px;
+  margin: -64px 55px;
+  color: #FFFCEE;
+  background-color: lawngreen;
+}
+
+.hlogin{
+  color:#FFFCEE;
+}
+.hlogin:hover{
+  color:black;
 }
 
 .score{
   font: 28px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
+  letter-spacing: 2px;
+  margin: 55px 0 0 55px;
+}
+
+.badges{
+  margin: 55px 0 45px 217px;
+}
+
+.badgeTitle{
+  color:#FFFCEE;
+  font: 44px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
-  margin-top: 35px;
+  font-weight: bold;
+}
+.badges p{
+  color:#FFFCEE;
+  font: 34px play, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
 }

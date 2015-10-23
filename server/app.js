@@ -1,5 +1,4 @@
 var express = require('express');
-var index = require('./routes/index');
 var path = require('path');
 var bodyParser = require('body-parser');
 var passport = require('passport');
@@ -8,9 +7,11 @@ var mongoose = require('mongoose');
 var localStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
 var register = require('./routes/register');
+//var main = require('./routes/main');
 
-var routes = require('./routes/index');
+var routes = require('./routes/main');
 var users = require('./routes/users');
+var index = require('./routes/index');
 var app = express();
 
 //mongoose set up
@@ -24,6 +25,11 @@ MongoDB.on('error', function (err){
 MongoDB.once('open', function (){
     console.log('mongodb connection open, app.js server side');
 });
+
+ //view engine setup // added 10/29
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
 
 app.use(session({
     secret: 'secret',
@@ -70,14 +76,18 @@ passport.deserializeUser(function(id, callback){
     })
 });
 
+
+
 app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use('/', index);
+
 
 app.use('/', routes);
 app.use('/users', users);
 app.use('/register', register);
+app.use('/index', index);
+//app.use('main', main);
 
 
 //app.get('/', function(req, res){
@@ -100,7 +110,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
+        res.send('error SERIOUSLY', {
             message: err.message,
             error: err
         });
@@ -111,7 +121,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.send('error FOR REAL', {
         message: err.message,
         error: {}
     });
