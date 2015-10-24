@@ -1,0 +1,45 @@
+
+//Beginner
+{
+  "id": "0",
+  "title": "Who is the only lead character that is mentioned in the opening crawl?",
+  "fourAnswers":[
+    {"text": "Luke Skywalker",
+    "answer": "false"},
+    {"text": "Yoda",
+      "answer": "false"},
+    {"text": "Princess Leia",
+      "answer": "true"},
+    {"text": "C3-PO",
+      "answer": "false"}
+  ],
+  "id": "1",
+  "title": "Who is the only other character that in NOT a jedi that uses a lightsaber?",
+  "fourAnswers":[
+    {"text": "Princess Leia",
+      "answer": "false"},
+    {"text": "Han Solo",
+      "answer": "true"},
+    {"text": "Lando Calrissian",
+      "answer": "false"},
+    {"text": "Boba Fett",
+      "answer": "false"}
+  ],
+  "id": "2",
+  "title": "Who is the first character to speak in “A New Hope?",
+  "fourAnswers":[
+    {"text": "Luke Skywalker",
+      "answer": "false"},
+    {"text": "R2-D2",
+      "answer": "false"},
+    {"text": "Uncle Owen",
+      "answer": "false"},
+    {"text": "C3-PO",
+      "answer": "true"}
+  ]
+}
+
+
+
+
+

@@ -17,3 +17,10 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
     };
     fetchLukes();
 }]);
+
+$http.get('/getQuestions').then(function(response) {
+    $scope.djinfo = response.data;
+    console.log($scope.djinfo);
+
+
+});

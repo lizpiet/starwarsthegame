@@ -1,0 +1,45 @@
+
+//Intermediate
+{
+  "id": "0",
+  "title": "Who is the only director NOT considered for directing Return of the Jedi?",
+  "fourAnswers":[
+    {"text": "David Cronenberg",
+      "answer": "false"},
+    {"text": "David Lynch",
+      "answer": "false"},
+    {"text": "Stanley Kubrick",
+      "answer": "true"},
+    {"text": "Steven Spielberg",
+      "answer": "false"}
+  ],
+  "id": "1",
+  "title": "How many puppeteers did Jaba the Hut require?",
+  "fourAnswers":[
+    {"text": "7",
+      "answer": "true"},
+    {"text": "10",
+      "answer": "false"},
+    {"text": "23",
+      "answer": "false"},
+    {"text": "4",
+      "answer": "false"}
+  ],
+  "id": "2",
+  "title": "What  is Yoda’s first name?",
+  "fourAnswers":[
+    {"text": "Yoda",
+      "answer": "false"},
+    {"text": "Minch",
+      "answer": "true"},
+    {"text": "Farfalle",
+      "answer": "false"},
+    {"text": "Lars",
+      "answer": "false"}
+  ]
+}
+
+
+
+
+

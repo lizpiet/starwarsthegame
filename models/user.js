@@ -5,10 +5,13 @@ var SALT_WORK_FACTORY = 10;
 
 var UserSchema = new Schema({
     username: {type: String, required: true, index: {unique: true}},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
+    score: Number,
+    lightsaberScores: Number,
+    wookieScores: Number,
+    falconScores: Number,
+    lastQuestion: Number
 });
-
-
 
 UserSchema.pre('save', function(next){
     var user = this;

@@ -39,6 +39,7 @@ h4{
   font-weight: bold;
   color: #3A8BCA;
   margin-top: 0;
+  line-height: 50px;
 }
 
 .quote{
@@ -125,17 +126,17 @@ input.login{
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 20px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 34px 0 25px;
-  color: black;
+  color: white;
   background-color: red;
 }
 .register:hover{
-  color:black;
+  color:lawngreen;
   background-color:#FFFCEE;
 }
 
-a  {
+.new-login   {
   font: 34px play;
   font-weight: bold;
   color: lawngreen;
@@ -143,7 +144,19 @@ a  {
   margin-top: 34px;
   letter-spacing: 5px;
 }
-a:hover {
+.new-login:hover {
+  color: #FFFCEE;
+}
+
+.new-main   {
+  font: 34px play;
+  font-weight: bold;
+  color: lawngreen;
+  text-decoration: none;
+  margin-top: 34px;
+  letter-spacing: 5px;
+}
+.new-main:hover {
   color: #FFFCEE;
 }
 
@@ -170,7 +183,7 @@ a:hover {
   border-color: transparent;
   padding: 6px 30px;
   letter-spacing: 1px;
-  margin: 34px 56px;
+  margin: 64px 56px;
   color: #FFFCEE;
   background-color: lawngreen;
 }
@@ -189,14 +202,16 @@ a:hover {
   margin: -64px 55px;
   color: #FFFCEE;
   background-color: lawngreen;
-}
+  text-decoration: none;
 
-.hlogin{
-  color:#FFFCEE;
 }
-.hlogin:hover{
-  color:black;
-}
+/*.hlogin{*/
+  /*color:#FFFCEE;*/
+  /*text-decoration: none;*/
+/*}*/
+/*.loginhome:hover{*/
+  /*color:black;*/
+/*}*/
 
 .score{
   font: 28px play, Helvetica, Arial, sans-serif;
@@ -207,6 +222,8 @@ a:hover {
 
 .badges{
   margin: 55px 0 45px 217px;
+  /*float: left;*/
+  /*clear: both;*/
 }
 
 .badgeTitle{
@@ -220,4 +237,32 @@ a:hover {
   font: 34px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
+}
+
+.one{
+  float:left;
+  width: 25%;
+  margin: 0 2% 0 6%;
+
+}
+.two{
+  float:left;
+  width: 25%;
+  margin: 0 4%;
+}
+.three{
+  float:left;
+  width: 25%;
+  margin: 0 4%;
+}
+#levels{
+  padding-bottom: 30%;
+}
+
+a{
+  text-decoration: none;
+  color:#fffcee;
+}
+a:hover{
+  color:black;
 }

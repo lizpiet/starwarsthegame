@@ -11,4 +11,12 @@ router.get('/home', function(req, res, next) {
     res.sendFile(path.join(__dirname, '../public/views/userHome.html'));
 });
 
+//
+//app.get('/getQuestions', function(request, response, next) {
+//  User.find({}, function(err, users) {
+//    response.json(users);
+//  })
+//
+//});
+
 module.exports = router;
