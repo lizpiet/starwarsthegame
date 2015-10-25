@@ -6,7 +6,6 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var localStrategy = require('passport-local').Strategy;
 var register = require('./routes/register');
-var question = require('./routes/question');
 
 
 var User = require('../models/user');
@@ -17,6 +16,7 @@ var beginner = require('../models/beginner');
 var routes = require('./routes/main');
 var users = require('./routes/users');
 var index = require('./routes/index');
+var question = require('./routes/question');
 var app = express();
 
 //mongoose set up
@@ -103,15 +103,15 @@ var server = app.listen(3000, function(){
         var port = server.address().port;
         console.log('Server side app.js., Listening on port: ', port);
     });
+//
+//app.use(function(req, res, next) {
+//    var err = new Error('Not Found');
+//    err.status = 404;
+//    next(err);
+//});
 
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
-
-// development error handler
-// will print stacktrace
+// //development error handler
+// //will print stacktrace
 //if (app.get('env') === 'development') {
 //    app.use(function(err, req, res, next) {
 //        res.status(err.status || 500);
@@ -121,9 +121,9 @@ app.use(function(req, res, next) {
 //        });
 //    });
 //}
-
-// production error handler
-// no stacktraces leaked to user
+//
+// //production error handler
+// //no stacktraces leaked to user
 //app.use(function(err, req, res, next) {
 //    res.status(err.status || 500);
 //    res.send('error FOR REAL', {

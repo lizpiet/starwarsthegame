@@ -17,6 +17,11 @@ h1{
   color: #FFFCEE;
   margin-bottom: 35px;
 }
+
+.force{
+  padding-top:140px;
+}
+
 h2{
   padding-top:85px;
   font: 54px play, Helvetica, Arial, sans-serif;
@@ -105,7 +110,7 @@ input.login{
 }
 
 .submit{
-  font: 24px play, Helvetica, Arial, sans-serif;
+  font: 34px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -121,7 +126,7 @@ input.login{
 }
 
 .register{
-  font: 24px play, Helvetica, Arial, sans-serif;
+  font: 34px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -149,14 +154,29 @@ input.login{
 }
 
 .new-main   {
-  font: 34px play;
+  font: 29px play;
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
-  margin-top: 34px;
+  margin: 24px 42px 0 0;
   letter-spacing: 5px;
+  float:right;
 }
 .new-main:hover {
+  color: #FFFCEE;
+}
+.play   {
+  font: 55px play;
+  font-weight: bold;
+  color: lawngreen;
+  text-decoration: none;
+  /*margin: 24px 42px 0 0;*/
+  letter-spacing: 5px;
+  text-align: center;
+  display:block;
+  margin: 139px auto 20%;
+}
+.play:hover {
   color: #FFFCEE;
 }
 
@@ -177,13 +197,13 @@ input.login{
 
 .logout{
   float:right;
-  font: 24px play, Helvetica, Arial, sans-serif;
+  font: 34px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 30px;
   letter-spacing: 1px;
-  margin: 64px 56px;
+  margin: 64px 65px;
   color: #FFFCEE;
   background-color: lawngreen;
 }
@@ -193,13 +213,13 @@ input.login{
 }
 .loginhome{
   float:right;
-  font: 24px play, Helvetica, Arial, sans-serif;
+  font: 34px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 30px;
   letter-spacing: 1px;
-  margin: -64px 55px;
+  margin: -54px 65px;
   color: #FFFCEE;
   background-color: lawngreen;
   text-decoration: none;
