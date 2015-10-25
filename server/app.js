@@ -5,9 +5,14 @@ var passport = require('passport');
 var session = require('express-session');
 var mongoose = require('mongoose');
 var localStrategy = require('passport-local').Strategy;
-var User = require('../models/user');
 var register = require('./routes/register');
-//var main = require('./routes/main');
+//var question = require('./routes/question');
+
+
+var User = require('../models/user');
+var beginner = require('../models/beginner');
+//var Intermediate = require('../models/intermediate');
+//var Advanced = require('../models/advanced');
 
 var routes = require('./routes/main');
 var users = require('./routes/users');
@@ -87,7 +92,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/register', register);
 app.use('/index', index);
-//app.use('main', main);
+//app.use('/question', question);
 
 
 //app.get('/', function(req, res){
