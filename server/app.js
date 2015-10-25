@@ -6,13 +6,13 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var localStrategy = require('passport-local').Strategy;
 var register = require('./routes/register');
-//var question = require('./routes/question');
+var question = require('./routes/question');
 
 
 var User = require('../models/user');
 var beginner = require('../models/beginner');
-//var Intermediate = require('../models/intermediate');
-//var Advanced = require('../models/advanced');
+//var intermediate = require('../models/intermediate');
+//var advanced = require('../models/advanced');
 
 var routes = require('./routes/main');
 var users = require('./routes/users');
@@ -92,7 +92,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/register', register);
 app.use('/index', index);
-//app.use('/question', question);
+app.use('/question', question);
 
 
 //app.get('/', function(req, res){
@@ -112,25 +112,25 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.send('error SERIOUSLY', {
-            message: err.message,
-            error: err
-        });
-    });
-}
+//if (app.get('env') === 'development') {
+//    app.use(function(err, req, res, next) {
+//        res.status(err.status || 500);
+//        res.send('error SERIOUSLY', {
+//            message: err.message,
+//            error: err
+//        });
+//    });
+//}
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.send('error FOR REAL', {
-        message: err.message,
-        error: {}
-    });
-});
+//app.use(function(err, req, res, next) {
+//    res.status(err.status || 500);
+//    res.send('error FOR REAL', {
+//        message: err.message,
+//        error: {}
+//    });
+//});
 
 module.exports = app;
 
