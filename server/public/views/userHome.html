@@ -8,21 +8,32 @@
     <title></title>
 </head>
 <body ng-Controller="IndexController">
-
-
-<div>
     <div>
         <button type="submit" class="logout" value="log out"><a href="/">log out</a></button>
         <a href="/"></a>
     </div>
+    <div class="score">
+        <a href="/register">SCORE <br/> BOARD</a>
+    </div>
+
+    <h1>Beginner Level</h1>
             <h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>
             <p class="quote">- Han Solo</p>
-        </div>
 
-            <div id="beginnerQuestion" ng-repeat="beginnerquestion in beginner">{{title}}</div>
+            <div id="beginnerQuestion" ng-repeat="beginner in beginners">{{title}}</div>
             <div id="intermediateQuestion"></div>
             <div id="advancedQuestion"></div>
                 <div id="answer"></div>
+
+    <div>
+        <button type="submit" class="skip" value="skip"><a href="/">skip</a></button>
+        <a href="/"></a>
+    </div>
+
+    <div>
+        <button type="submit" class="answer" value="answer"><a href="/">answer</a></button>
+        <a href="/"></a>
+    </div>
 
     </body>
 </html>

@@ -6,11 +6,11 @@ body {
   -webkit-border-radius: 46px;
   -moz-border-radius: 46px;
   background-image: url("/assets/images/noise.png");
-  /*padding: 50px;*/
+  padding: 0 0 60%;
   font: 14px play, Helvetica, Arial, sans-serif;
 }
 h1{
-  font: 116px play, Helvetica, Arial, sans-serif;
+  font: 87px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
@@ -23,15 +23,15 @@ h1{
 }
 
 h2{
-  padding-top:85px;
-  font: 54px play, Helvetica, Arial, sans-serif;
+  padding-top:65px;
+  font: 44px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   margin: 0 250px;
-  color: #FFFCEE;
+  color: #3A8BCA;
 }
 h4{
-  font: 46px play, Helvetica, Arial, sans-serif;
+  font: 35px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   color: #FFFCEE;
@@ -39,16 +39,16 @@ h4{
 
 }
 #levels p{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 27px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   color: #3A8BCA;
   margin-top: 0;
-  line-height: 50px;
+  line-height: 40px;
 }
 
 .quote{
-  font: 38px play, Helvetica, Arial, sans-serif;
+  font: 30px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   /*float:right;*/
@@ -58,7 +58,7 @@ h4{
   padding-bottom:29px;
 }
 .logs{
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   letter-spacing: 5px;
   font-weight: bold;
   text-align: center;
@@ -70,7 +70,7 @@ h4{
   padding-bottom:6px;
 }
 .r-logs{
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   letter-spacing: 5px;
   font-weight: bold;
   text-align: center;
@@ -99,18 +99,18 @@ h4{
 
 #login-form{
   display:block;
-  margin:225px auto;
+  margin:125px auto;
   text-align: center;
 
 }
 
 input.login{
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
 .submit{
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -126,7 +126,7 @@ input.login{
 }
 
 .register{
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -142,7 +142,7 @@ input.login{
 }
 
 .new-login   {
-  font: 34px play;
+  font: 29px play;
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
@@ -197,7 +197,7 @@ input.login{
 
 .logout{
   float:right;
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -213,7 +213,7 @@ input.login{
 }
 .loginhome{
   float:right;
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -225,6 +225,45 @@ input.login{
   text-decoration: none;
 
 }
+
+
+
+.answer{
+  float:right;
+  font: 29px play, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 6px 30px;
+  letter-spacing: 1px;
+  /*margin: 64px 65px;*/
+  color: #FFFCEE;
+  background-color: lawngreen;
+  margin: 69px 50% 0 200px;
+}
+
+.skip:hover{
+  color:lawngreen;
+}
+.skip{
+  float:right;
+  font: 29px play, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 6px 30px;
+  letter-spacing: 1px;
+  /*margin: 64px 65px;*/
+  color: #FFFCEE;
+  background-color: red;
+  margin: 69px 65px 0 200px;
+}
+
+.answer:hover{
+  color:black;
+
+}
+
 /*.hlogin{*/
   /*color:#FFFCEE;*/
   /*text-decoration: none;*/

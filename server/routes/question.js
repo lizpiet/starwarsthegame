@@ -1,18 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-
-//var Question = mongoose.model('Question', {title:String});
 var path = require('path');
+
 var beginner = mongoose.model('beginner', {title:String});
 
 
 
 router.get('/', function(request, response, next){
-    return beginner.find({}).exec(function(err, question){
+    return beginner.find({}).exec(function(err, beginner){
         if(err)throw new Error(err);
         //response.send('hello');
-        response.send(JSON.stringify(question));
+        response.send(JSON.stringify(beginner));
 
         next();
     });

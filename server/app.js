@@ -7,9 +7,8 @@ var mongoose = require('mongoose');
 var localStrategy = require('passport-local').Strategy;
 var register = require('./routes/register');
 
-
 var User = require('../models/user');
-var beginner = require('../models/beginner');
+var Beginner = require('../models/beginner');
 //var intermediate = require('../models/intermediate');
 //var advanced = require('../models/advanced');
 

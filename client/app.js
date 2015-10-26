@@ -2,13 +2,17 @@
 var app = angular.module('app', []);
 app.controller("IndexController", ['$scope', '$http', function($scope, $http){
 
+    $scope.beginner = {};
+    $scope.beginners = [];
+
     $scope.getQuestion = function(){
         //make the call to ('/question'), then do a function
-        $http.get('/question').then(function(item){
-            console.log(item);
+        $http.get('/question').then(function(beginner){
+            console.log(beginner);
+            //console.log(data);
             console.log("what the heck, man?");
             // assigning all of you tasks in a $scope.blank
-            //$scope.beginner=item.data;
+            $scope.beginner=beginner.data;
         });
     };
 
