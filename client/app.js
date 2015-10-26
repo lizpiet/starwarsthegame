@@ -24,10 +24,10 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
     $scope.intermediates = [];
 
     $scope.getQuestion2 = function(){
-        //make the call to ('/beginner'), then do a function
+        //make the call to ('/intermediate'), then do a function
         $http.get('/intermediate').then(function(intermediate){
             console.log(intermediate.data);
-            console.log("will this ever work?");
+            console.log("why?");
             // assigning all of you tasks in a $scope.blank
             $scope.intermediates=intermediate.data;
         });
@@ -41,7 +41,7 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
     $scope.finals = [];
 
     $scope.getQuestion3 = function(){
-        //make the call to ('/beginner'), then do a function
+        //make the call to ('/final'), then do a function
         $http.get('/final').then(function(final){
             console.log(final.data);
             console.log("YES?");

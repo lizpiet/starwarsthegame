@@ -327,6 +327,12 @@ a:hover{
 }
 
 
+
+
+
+
+
+
 /*trivia game*/
 
 #beginnerQuestion{
@@ -337,6 +343,24 @@ a:hover{
   font-weight: bold;
   color: #FFFCEE;
 }
+#intermediateQuestion{
+  font: 35px play, Helvetica, Arial, sans-serif;
+  margin-left: 10%;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #FFFCEE;
+}
+#finalQuestion{
+  font: 35px play, Helvetica, Arial, sans-serif;
+  margin-left: 10%;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #FFFCEE;
+}
+
+
 
 
 #answer{
