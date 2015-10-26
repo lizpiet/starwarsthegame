@@ -20,10 +20,10 @@
             <h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>
             <p class="quote">- Han Solo</p>
 
-            <div id="beginnerQuestion" ng-repeat="beginner in beginners">{{title}}</div>
-            <div id="intermediateQuestion"></div>
+            <div id="beginnerQuestion" ng-repeat="beginner in beginners">{{beginner.title}}</div>
+            <div id="intermediateQuestion" ng-repeat="intermediate in intermediates">{{intermediate.title}}</div>
             <div id="advancedQuestion"></div>
-                <div id="answer"></div>
+                <div id="answer" ng-repeat="beginner in beginners">{{beginner.fourAnswers[0].text}}</div>
 
     <div>
         <button type="submit" class="skip" value="skip"><a href="/">skip</a></button>

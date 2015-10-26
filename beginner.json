@@ -12,7 +12,11 @@
       "answer": "true"},
     {"text": "C3-PO",
       "answer": "false"}
-  ],
+  ]
+}
+
+
+{
   "id": "1",
   "title": "Who is the only other character that in NOT a jedi that uses a lightsaber?",
   "fourAnswers":[
@@ -24,7 +28,12 @@
       "answer": "false"},
     {"text": "Boba Fett",
       "answer": "false"}
-  ],
+    ]
+}
+
+
+{
+
   "id": "2",
   "title": "Who is the first character to speak in “A New Hope?",
   "fourAnswers":[

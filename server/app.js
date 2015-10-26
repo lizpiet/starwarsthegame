@@ -9,13 +9,18 @@ var register = require('./routes/register');
 
 var User = require('../models/user');
 var Beginner = require('../models/beginner');
-//var intermediate = require('../models/intermediate');
-//var advanced = require('../models/advanced');
+var Intermediate = require('../models/intermediate');
+var Final = require('../models/final');
 
 var routes = require('./routes/main');
-var users = require('./routes/users');
 var index = require('./routes/index');
-var question = require('./routes/question');
+
+var users = require('./routes/users');
+
+var beginner = require('./routes/beginner');
+var intermediate = require('./routes/intermediate');
+var final = require('./routes/final');
+
 var app = express();
 
 //mongoose set up
@@ -91,7 +96,9 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/register', register);
 app.use('/index', index);
-app.use('/question', question);
+app.use('/beginner', beginner);
+app.use('/intermediate', intermediate);
+app.use('/final', final);
 
 
 //app.get('/', function(req, res){

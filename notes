@@ -1,0 +1,67 @@
+passport notes:
+
+passport-local-express
+
+copy and paste dependencies
+
+delete node modules
+\npm install
+
+open up serverside js
+//add this stuff
+var mongoose - require
+
+var passport. require
+
+var LocalStrategies ...Strategy;
+
+above view engine setup
+
+//add this stuff
+app.use(require('express-session')({
+ secret:'keyboard cat',
+ etc
+
+ //above cookie parser
+}
+
+app.use passport
+
+add more stuff to passport server side app
+
+
+
+add account.js in models file
+var mongoose
+var Schema
+var passpportLocalMongoose
+
+var Account = new Schema({
+username: String,
+password: String
+});
+
+Account.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model
+
+
+
+ router.get('/', function(req, res, next){
+ res.render('index', {title: 'Express'});
+ });
+
+ router.ger('/register'. function(req, res, next
+
+ module.exports= router;
+
+ extends layout
+
+ block content
+    .container
+        h1 Login Page
+            p.lead Say Something worthwihle here
+            br
+            form(role='form', action='/login', method='post', style
+
+            create a button.btn.btn

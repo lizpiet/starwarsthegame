@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var BeginnerSchema = new Schema({
+var finalSchema = new Schema({
     title: String,
     fourAnswers: [
         {text: String, answer: Boolean},
@@ -12,8 +12,7 @@ var BeginnerSchema = new Schema({
 });
 
 
-var Beginner = mongoose.model('Beginner', BeginnerSchema);
+var Final = mongoose.model('Final', finalSchema);
 
-module.exports = Beginner;
-
+module.exports = Final;
 
