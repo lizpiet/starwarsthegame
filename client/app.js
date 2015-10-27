@@ -13,6 +13,8 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
             // assigning all of you tasks in a $scope.blank
             $scope.beginners=beginner.data;
         });
+
+
     };
 
 

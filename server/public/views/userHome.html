@@ -25,7 +25,9 @@
             <div id="finalQuestion" ng-repeat="final in finals">{{final.title}}</div>
 
 
-    <div id="answer" ng-repeat="beginner in beginners">{{beginner.fourAnswers[0].text}}</div>
+    <div id="answer" ng-repeat="beginner in beginners"><input type="radio" name="radio" value="radio">{{beginner.fourAnswers[0].text}}</div>
+    <!--<div id="answer" ng-repeat="beginner in beginners">{{beginner.fourAnswers[0].text}}</div>-->
+
 
     <div>
         <button type="submit" class="skip" value="skip"><a href="/">skip</a></button>
