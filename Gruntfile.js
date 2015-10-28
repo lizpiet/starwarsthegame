@@ -7,7 +7,7 @@ module.exports = function(grunt){
                 //banner:'/*!<%=pkg.name %><%=grunt.template.today("yyyy-mm-dd")%>/n*/'
             },
             build: {
-                src: 'client/service_app.js',
+                src: 'client/app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
             }
         },

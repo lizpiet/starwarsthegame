@@ -45,7 +45,8 @@ app.use(session({
     key: 'user',
     resave: 'true',
     saveUninitialized: false,
-    cookie: { maxAge: 60000, secure:false}
+    //changed maxAge: 600000 to null, null = one year
+    cookie: { maxAge: null, secure:false}
 }));
 
 app.use(passport.initialize());
