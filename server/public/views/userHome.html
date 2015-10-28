@@ -34,20 +34,11 @@
             <div id="intermediateQuestion" >{{intermediate.title}}</div>
             <div id="finalQuestion" >{{final.title}}</div>
 
-
     <div>
         <ul>
             <li class="fourAnswers" ng-repeat="answer in currentQuestion.fourAnswers">
                 <input ng-model="$parent.selected" type="radio" name="answerRadio" ng-value="answer.text">{{answer.text}}
-                <!--ng-model="begans1">{{beginner.fourAnswers[0].answer}}-->
-
             </li>
-            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
-                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[1].text}}-->
-            <!--</li>-->
-            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
-                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[2].text}}-->
-            <!--</li>-->
             <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
                 <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[3].text}}-->
             <!--</li>-->

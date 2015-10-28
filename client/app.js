@@ -1,13 +1,26 @@
+var app = angular.module('app', ['ngRoute']);
 
-var app = angular.module('app', []);
+///////
+app.config(function($routeProvider, $locationProvider){
+    $routeProvider
+        .when('/win',{
+            templateUrl:'views/win_lose.html',
+            controller: 'GameController'
+        })
+        .when('/',{
+            templateUrl:'views/win_lose.html',
+            controller: 'GameControllerLose'
+        });
+
+    $locationProvider.html5Mode(true);
+});
+///////////
+
 app.controller("IndexController", ['$scope', '$http', function($scope, $http){
 
-    //$scope.beginner = {};
     $scope.beginners = [];
     $scope.selectedAnswer={};
     $scope.currentQuestionIndex = 0;
-
-
 
     $scope.getQuestion = function(){
 
@@ -39,16 +52,30 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
             if($scope.selected == $scope.currentQuestion.fourAnswers[i].text){
                 if($scope.currentQuestion.fourAnswers[i].answer){
                     alert('Correct!');
+                    
 
-                    //Add points
+                    //  go to page /win,
+                    // display "You Win X Points"  //  click Move along button
 
-                    //Change current question
+                    //  Add points to the database, append points to screen
 
-                    //Update View
+                    //  Change current question
+
+                    //  Update View to next question
 
 
                 } else {
                     alert('Wrong!');
+
+                    //go to page, display "You Lose X Points"  // click Move along button
+
+                    //Subtract points to the database, append points to screen
+
+                    //Change current question
+
+                    //Update View to next question
+
+
                 }
             }
         }
