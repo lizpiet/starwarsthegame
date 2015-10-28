@@ -12,22 +12,47 @@
         <button type="submit" class="logout" value="log out"><a href="/">log out</a></button>
         <a href="/"></a>
     </div>
+
+    <div>
+        <button type="submit" class="home" value="home"><a href="/">home</a></button>
+        <a href="/"></a>
+    </div>
+
+
     <div class="score">
         <a href="/register">SCORE <br/> BOARD</a>
     </div>
 
-    <h1>Beginner Level</h1>
+    <h1> Level Whatever </h1>
+
+            <!--{{currentQuestion}}-->
+
             <h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>
             <p class="quote">- Han Solo</p>
 
-            <div id="beginnerQuestion" ng-repeat="beginner in beginners">{{beginner.title}}</div>
-            <div id="intermediateQuestion" ng-repeat="intermediate in intermediates">{{intermediate.title}}</div>
-            <div id="finalQuestion" ng-repeat="final in finals">{{final.title}}</div>
+            <div id="beginnerQuestion">{{currentQuestion.title}}</div>
+            <div id="intermediateQuestion" >{{intermediate.title}}</div>
+            <div id="finalQuestion" >{{final.title}}</div>
 
 
-    <div id="answer" ng-repeat="beginner in beginners"><input type="radio" name="radio" value="radio">{{beginner.fourAnswers[0].text}}</div>
-    <!--<div id="answer" ng-repeat="beginner in beginners">{{beginner.fourAnswers[0].text}}</div>-->
+    <div>
+        <ul>
+            <li class="fourAnswers" ng-repeat="answer in currentQuestion.fourAnswers">
+                <input ng-model="$parent.selected" type="radio" name="answerRadio" ng-value="answer.text">{{answer.text}}
+                <!--ng-model="begans1">{{beginner.fourAnswers[0].answer}}-->
 
+            </li>
+            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
+                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[1].text}}-->
+            <!--</li>-->
+            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
+                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[2].text}}-->
+            <!--</li>-->
+            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
+                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[3].text}}-->
+            <!--</li>-->
+        </ul>
+    </div>
 
     <div>
         <button type="submit" class="skip" value="skip"><a href="/">skip</a></button>
@@ -35,8 +60,8 @@
     </div>
 
     <div>
-        <button type="submit" class="answer" value="answer"><a href="/">answer</a></button>
-        <a href="/"></a>
+        <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
+
     </div>
 
     </body>

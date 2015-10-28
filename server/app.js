@@ -28,11 +28,11 @@ var mongoURI = 'mongodb://localhost:27017/starwarsthegame';
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err){
-    console.log('Crap, mongodb connection error, app.js server side', err);
+    console.log('Crap, mongodb connection error, service_app.js server side', err);
 });
 
 MongoDB.once('open', function (){
-    console.log('mongodb connection open, app.js server side');
+    console.log('mongodb connection open, service_app.js server side');
 });
 
  //view engine setup // added 10/29
@@ -100,12 +100,12 @@ app.use('/final', final);
 
 
 //app.get('/', function(req, res){
-//    res.send('Hello! I am on app.js server side');
+//    res.send('Hello! I am on service_app.js server side');
 //});
 
 var server = app.listen(3000, function(){
         var port = server.address().port;
-        console.log('Server side app.js., Listening on port: ', port);
+        console.log('Server side service_app.js., Listening on port: ', port);
     });
 //
 //app.use(function(req, res, next) {

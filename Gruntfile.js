@@ -7,7 +7,7 @@ module.exports = function(grunt){
                 //banner:'/*!<%=pkg.name %><%=grunt.template.today("yyyy-mm-dd")%>/n*/'
             },
             build: {
-                src: 'client/app.js',
+                src: 'client/service_app.js',
                 dest: 'server/public/assets/scripts/app.min.js'
             }
         },
@@ -18,7 +18,10 @@ module.exports = function(grunt){
                 src: [
                     "angular/angular.min.js",
                     "angular/angular.min.js.map",
-                    "angular/angular-csp.css"
+                    "angular/angular-csp.css",
+                    "jquery/dist/jquery.js",
+                    "jquery/dist/jquery.min.js",
+                    "jquery/dist/jquery.map.js"
                 ],
                 "dest": "server/public/vendors/"
             }

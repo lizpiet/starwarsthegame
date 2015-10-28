@@ -6,8 +6,8 @@ var Beginner = require('../../models/beginner');
 
 //var beginner = mongoose.model('beginner', {title:String});
 
-router.get('/', function(request, response, next){
-  Beginner.find({},function(err, beginner){
+router.get('/:id', function(request, response, next){
+  Beginner.find({id: request.params.id},function(err, beginner){
       console.log(beginner);
         //if(err)throw new Error(err);
         //response.send('hello');
