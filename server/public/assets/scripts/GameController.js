@@ -5,6 +5,8 @@
 app.controller('GameController', ['$scope', function($scope) {
 
     $scope.message = "Correct Answer!!!"
-    
+
+
+    //$scope.message = points earned
 
 }]);

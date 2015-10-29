@@ -49,6 +49,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                 //////////// check answers
 
     $scope.beginners = [];
+    $scope.score="";
 
     $scope.checkAnswers = function(){
 
@@ -62,9 +63,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
                     //location redirect, add routes to app/server side
                     //  go to page /win,
-
                     $location.path('/win');
-
 
                     //for (var i = 0; i < 4; i++) {
                     //    $scope.currentQuestion=$scope.currentQuestionIndex;
@@ -72,17 +71,19 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //}
 
                     // display "You Win X Points"  //  click Move along button
+                    // request to server, Add points to the database,
+                    $http.post('/points', {points:100}).success(function (res){
+                        console.log('Am i working?');
+                        $scope.score=res.data;
+                        console.log($scope.score);
+                    });
 
-                    $http.post('/points', {points:100});
+                    // append points to screen
+                    //$scope.getScore = function() {
+                    //
+                    //};
 
-                                // request to server,
-                                //  Add points to the database,
-
-                                // append points to screen
-
-                    //  Change current question
-
-                    //  Update View to next question
+                    //  Change current question //  Update View to next question
 
 
                 } else {

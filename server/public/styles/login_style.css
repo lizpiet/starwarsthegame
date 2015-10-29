@@ -391,3 +391,12 @@ a:hover{
   color: #FFFCEE;
   list-style-type: none;
 }
+
+
+
+.moveAlong{
+  font: 28px play, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 15px 0 0 25px;
+}

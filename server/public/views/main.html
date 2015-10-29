@@ -14,14 +14,21 @@
 <body ng-Controller="IndexController">
 <!--change this to database scoreboard-->
     <div class="score">
-        <a href="/register">SCORE <br/> BOARD</a>
+        <a href="/register" target="_self">SCORE <br/> BOARD</a>
     </div>
-    <div>
-        <button type="submit" class="loginhome" value="log in"><a href="/index">log in</a></button>
-        <div>
-            <a href="/register" class="new-main">new player</a>
-        </div>
-    </div>
+
+<div>
+    <a href="/index" target="_self"><button type="submit" class="loginhome" value="log in">log in</button></a>
+    <!--<a href="/logout"></a>-->
+</div>
+
+    <!--<div>-->
+        <!--<button type="submit" class="loginhome" value="log in"><a href="/index">log in</a></button>-->
+        <!--<div>-->
+
+            <a href="/register"  target="_self" class="new-main">new player</a>
+        <!--</div>-->
+    <!--</div>-->
 
     <h1>Star Wars: The Game</h1>
         <h2>In my experience, there is no such thing as luck.</h2>
