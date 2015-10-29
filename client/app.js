@@ -1,29 +1,34 @@
 var app = angular.module('app', ['ngRoute']);
 
-///////
-//get this stuff in line, ok. no simpatico
+/////////// get this stuff in line, ok. no simpatico
 
-//app.config(function($routeProvider, $locationProvider){
-//    $routeProvider
-//        .when('/win',{
-//            templateUrl:'views/win_lose.html',
-//            controller: 'GameController'
-//        })
-//        .when('/win',{
-//            templateUrl:'views/win_lose.html',
-//            controller: 'GameControllerLose'
-//        });
-//
-//    $locationProvider.html5Mode(true);
-//});
+app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+    $routeProvider
+        .when('/win',{
+            templateUrl:'views/win_lose.html',
+            controller: 'GameController'
+        })
+        .when('/lose',{
+            templateUrl:'views/win_lose.html',
+            controller: 'GameControllerLose'
+        })
+        .when('/',{
+            templateUrl:'views/main.html'
+        });
+
+    $locationProvider.html5Mode({
+        enabled: true});
+    //$locationProvider.html5Mode(true);
+}]);
+
 ///////////
 
-app.controller("IndexController", ['$scope', '$http', function($scope, $http){
+app.controller("IndexController", ['$scope', '$http', '$location', function($scope, $http, $location){
 
     $scope.beginners = [];
     $scope.selectedAnswer={};
     $scope.currentQuestionIndex = 0;
-    
+
     //////get questions
 
     $scope.getQuestion = function(){
@@ -50,20 +55,29 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
 
         console.log($scope.currentQuestion + " this is a crazy console, boogie on");
 
-
         for(var i = 0; i < $scope.currentQuestion.fourAnswers.length; i++){
             if($scope.selected == $scope.currentQuestion.fourAnswers[i].text){
                 if($scope.currentQuestion.fourAnswers[i].answer){
                     alert('Correct!');
+                    console.log($scope.currentQuestion.fourAnswers[i].answer);
 
-
+                    //location redirect, add routes to app/server side
                     //  go to page /win,
+
+                    $location.path('/win');
+
+
+                    //for (var i = 0; i < 4; i++) {
+                    //    $scope.currentQuestion=$scope.currentQuestionIndex;
+                    //    $scope.currentQuestionIndex ++;
+                    //}
+
                     // display "You Win X Points"  //  click Move along button
 
                     $http.post('/points', {points:100});
+
                                 // request to server,
                                 //  Add points to the database,
-
 
                                 // append points to screen
 
@@ -76,14 +90,14 @@ app.controller("IndexController", ['$scope', '$http', function($scope, $http){
                     alert('Wrong!');
 
                     //go to page, display "You Lose X Points"  // click Move along button
+                    //$location.path('/win');
 
                     //Subtract points to the database, append points to screen
 
                     //Change current question
 
                     //Update View to next question
-
-
+                    
                 }
             }
         }
