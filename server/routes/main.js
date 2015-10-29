@@ -25,4 +25,9 @@ router.post('/points', function(req, res, next){
     })
 });
 
+router.get('/logout', function(req, res){
+    req.logout();
+    res.sendFile(path.join(__dirname, "../server/public/views/main.html"));
+});
+
 module.exports = router;

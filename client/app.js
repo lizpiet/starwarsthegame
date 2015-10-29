@@ -16,8 +16,7 @@ app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $lo
             templateUrl:'views/main.html'
         });
 
-    $locationProvider.html5Mode({
-        enabled: true});
+    $locationProvider.html5Mode({enabled: true});
     //$locationProvider.html5Mode(true);
 }]);
 
@@ -97,7 +96,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //Change current question
 
                     //Update View to next question
-                    
+
                 }
             }
         }

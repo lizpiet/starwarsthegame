@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-    <base href="/main">
+    <base href="/">
     <script src ="/vendors/angular/angular.min.js" type="text/javascript"></script>
-    <script src ="/assets/scripts/app.min.js" type="text/javascript"></script>
     <script src ="/vendors/angular-route/angular-route.min.js" type="text/javascript"></script>
+    <script src ="/assets/scripts/app.min.js" type="text/javascript"></script>
+    <script src ="/assets/scripts/GameController.js" type="text/javascript"></script>
+    <script src ="/assets/scripts/GameControllerLose.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../styles/login_style.css">
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body ng-Controller="IndexController">
     <div>
-        <button type="submit" class="logout" value="log out"><a href="/">log out</a></button>
-        <a href="/"></a>
+        <a href="/" target="_self"><button type="submit" class="logout" value="log out">log out</button></a>
+        <!--<a href="/logout"></a>-->
     </div>
 
     <div>
@@ -30,21 +32,26 @@
             <!--{{currentQuestion}}-->
 
             <h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>
-            <p class="quote">- Han Solo</p>
+                <p class="quote">- Han Solo</p>
 
-            <div id="beginnerQuestion">{{currentQuestion.title}}</div>
-            <div id="intermediateQuestion" >{{intermediate.title}}</div>
-            <div id="finalQuestion" >{{final.title}}</div>
+                    <div id="beginnerQuestion">{{currentQuestion.title}}</div>
+                    <div id="intermediateQuestion" >{{intermediate.title}}</div>
+                    <div id="finalQuestion" >{{final.title}}</div>
 
     <div>
         <ul>
             <li class="fourAnswers" ng-repeat="answer in currentQuestion.fourAnswers">
                 <input ng-model="$parent.selected" type="radio" name="answerRadio" ng-value="answer.text">{{answer.text}}
             </li>
-            <!--<li class="fourAnswers" ng-repeat="beginner in beginners">-->
-                <!--<input type="radio" name="radio" value="radio">{{beginner.fourAnswers[3].text}}-->
-            <!--</li>-->
+
         </ul>
+    </div>
+
+    <div id="main">
+
+        <ng-view>
+        </ng-view>
+
     </div>
 
     <div>
