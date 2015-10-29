@@ -27,6 +27,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
     $scope.beginners = [];
     $scope.selectedAnswer={};
     $scope.currentQuestionIndex = 0;
+    $scope.currentLevel = 0;
 
     //////get questions
 
@@ -45,11 +46,11 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         });
 
     };
-
                 //////////// check answers
 
     $scope.beginners = [];
     $scope.score="";
+    $scope.beginnerPoints = 100;
 
     $scope.checkAnswers = function(){
 
@@ -65,14 +66,9 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //  go to page /win,
                     $location.path('/win');
 
-                    //for (var i = 0; i < 4; i++) {
-                    //    $scope.currentQuestion=$scope.currentQuestionIndex;
-                    //    $scope.currentQuestionIndex ++;
-                    //}
-
                     // display "You Win X Points"  //  click Move along button
                     // request to server, Add points to the database,
-                    $http.post('/points', {points:100}).success(function (res){
+                    $http.post('/points', {points:100}).then(function (res){
                         console.log('Am i working?');
                         $scope.score=res.data;
                         console.log($scope.score);
@@ -84,6 +80,10 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //};
 
                     //  Change current question //  Update View to next question
+                    //for (var i = 0; i < 4; i++) {
+                    //    $scope.currentQuestion=$scope.currentQuestionIndex;
+                    //    $scope.currentQuestionIndex ++;
+                    //}
 
 
                 } else {
