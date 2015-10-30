@@ -34,4 +34,18 @@ router.post('/', function(req, res, next){
     });
 });
 
+router.get('/:id', function(request, response, next){
+    Final.find({id: request.params.id},function(err, final){
+        console.log(response);
+        //if(err)throw new Error(err);
+        //response.send('hello');
+        //response.send(JSON.stringify(beginner));
+        response.json(final);
+
+
+        next();
+    });
+    //response.send(200);
+});
+
 module.exports = router;

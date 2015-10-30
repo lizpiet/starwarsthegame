@@ -47,12 +47,14 @@
         </ul>
     </div>
 
-    <div id="main">
+    <div ng-show="showRightWrong">
+        <div id="main">
 
-        <ng-view>
+            <ng-view>
 
-        </ng-view>
+            </ng-view>
 
+        </div>
     </div>
 
     <div>
@@ -60,7 +62,7 @@
     </div>
 
     <div>
-        <button type="submit" class="skip" value="skip"><a href="/">skip</a></button>
+        <button type="submit" class="skip" value="skip" ng-click="getQuestion()" >skip</button>
         <a href="/"></a>
     </div>
 

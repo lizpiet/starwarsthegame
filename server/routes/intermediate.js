@@ -31,4 +31,18 @@ router.post('/', function(req, res, next){
     });
 });
 
+router.get('/:id', function(request, response, next){
+    Intermediate.find({id: request.params.id},function(err, question){
+        console.log(response);
+        //if(err)throw new Error(err);
+        //response.send('hello');
+        //response.send(JSON.stringify(beginner));
+        response.json(question);
+
+
+        next();
+    });
+    //response.send(200);
+});
+
 module.exports = router;
