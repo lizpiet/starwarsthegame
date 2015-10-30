@@ -19,7 +19,7 @@ router.post('/points', function(req, res, next){
     User.findOne({username:req.user.username}, function(err, user){
         if(!user.score){
             user.score=0;
-            conosle.log('what?');
+            console.log('what?');
         }
         user.score+=req.body.points;
         user.save();

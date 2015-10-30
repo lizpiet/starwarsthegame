@@ -337,14 +337,6 @@ input.login{
   padding-bottom: 30%;
 }
 
-a{
-  text-decoration: none;
-  color:#fffcee;
-}
-a:hover{
-  color:black;
-}
-
 
 
 
@@ -399,4 +391,26 @@ a:hover{
   font-weight: bold;
   letter-spacing: 2px;
   margin: 15px 0 0 25px;
+  color: #FFFCEE;
+  background-color: lawngreen;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 6px 30px;
+}
+
+.moveAlong:hover{
+  color:black;
+  background-color:#FFFCEE;
+}
+
+
+
+
+
+a{
+  text-decoration: none;
+  color:#fffcee;
+}
+a:hover{
+  color:black;
 }

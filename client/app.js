@@ -1,24 +1,25 @@
 var app = angular.module('app', ['ngRoute']);
 
-/////////// get this stuff in line, ok. no simpatico
+//make a get call to user on page load to append the score
+
+/////////// Angular routing
 
 app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
     $routeProvider
         .when('/win',{
-            templateUrl:'views/win_lose.html',
+            templateUrl:'views/win.html',
             controller: 'GameController'
         })
         .when('/lose',{
-            templateUrl:'views/win_lose.html',
+            templateUrl:'views/lose.html',
             controller: 'GameControllerLose'
         })
         .when('/',{
             templateUrl:'views/main.html'
         });
 
-    $locationProvider.html5Mode({enabled: true});
-    //$locationProvider.html5Mode(true);
-}]);
+            $locationProvider.html5Mode({enabled: true});
+        }]);
 
 ///////////
 
@@ -26,6 +27,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.beginners = [];
     $scope.selectedAnswer={};
+
     $scope.currentQuestionIndex = 0;
     $scope.currentLevel = 0;
 
@@ -33,7 +35,13 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.getQuestion = function(){
 
-        var randomID= Math.floor(Math.random()*4);
+        //if current level is = 0 url = '/beginner/';
+        //else if
+        //else
+
+        var randomID= Math.floor(Math.random() * 4);
+
+            //if / else, // check questions so they aren't repeated
 
         //make the call to ('/beginner'), then do a function
         $http.get('/beginner/' + randomID).then(function(beginner){
@@ -43,16 +51,20 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
             // assigning all of you tasks in a $scope.blank
             $scope.beginners=beginner.data;
             $scope.currentQuestion = $scope.beginners[$scope.currentQuestionIndex];
+
+                //increment counter
+
         });
 
     };
-                //////////// check answers
+                //////////// check answers /// go to next question
 
     $scope.beginners = [];
     $scope.score="";
     $scope.beginnerPoints = 100;
 
     $scope.checkAnswers = function(){
+        
 
         console.log($scope.currentQuestion + " this is a crazy console, boogie on");
 
@@ -66,7 +78,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //  go to page /win,
                     $location.path('/win');
 
-                    // display "You Win X Points"  //  click Move along button
+                    // display "You Win X Points"
                     // request to server, Add points to the database,
                     $http.post('/points', {points:100}).then(function (res){
                         console.log('Am i working?');
@@ -74,12 +86,13 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                         console.log($scope.score);
                     });
 
-                    // append points to screen
-                    //$scope.getScore = function() {
-                    //
-                    //};
+                    // append points to screen // done on userHome.html {{score.score}}
 
+                        //On either move along or skip,
                     //  Change current question //  Update View to next question
+                    // Use  $scope.currentQuestionIndex = 0; above to do that.
+
+
                     //for (var i = 0; i < 4; i++) {
                     //    $scope.currentQuestion=$scope.currentQuestionIndex;
                     //    $scope.currentQuestionIndex ++;
@@ -90,73 +103,30 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     alert('Wrong!');
 
                     //go to page, display "You Lose X Points"  // click Move along button
-                    //$location.path('/win');
+                    $location.path('/lose');
 
                     //Subtract points to the database, append points to screen
 
-                    //Change current question
-
-                    //Update View to next question
+                    //Change current question  //Update View to next question
 
                 }
             }
         }
 
-        //if ($scope.beginners[0].fourAnswers[0].answer[0] === true) {
-        //    //console.log($scope.beginners[0].fourAnswers[0].answer[0]);
-        //    //console.log($scope.beginners);
-        //    alert("you lose");
-        //
-        //}else{
-        //    alert("you win");
-        //    // function {add points to database}
-        //    //console.log($scope.beginners[i].fourAnswers);
-        //    for (var i = 0; i <= $scope.currentQuestion.fourAnswers.length; i++){
-        //        console.log($scope.currentQuestion.fourAnswers[i].answer);
-        //        console.log("is this doing anything?");
-        //    }
-        //
-        //    //console.log($scope.beginner.fourAnswers[0].answer);
-        //    //console.log("just stop" + $scope.beginners[0].fourAnswers[0].answer);
-        //    //console.log($scope.beginner.fourAnswers[0].answer);
-        //    //console.log($scope.beginners[0].fourAnswers[1].answer);
-        //}
-
     };
 
     $scope.getQuestion();
-
-    //on click  do this:
-    //$scope.checkAnswers();
-
-            // inside question, radio buttons,
-            // if true, alert win -- click button to next question
-            // else alert lose -- click button to next question
 
             // click skip and go to next question //or
 
             // after 3 questions, go to Intermediate questions
 
-
-            //var i = 0;
-            //while (i <= $scope.beginner.data.fourAnswers.(length) ){
-            //    i++;
-            //}
-
-            //for(var i=0; i < 3; i++ ){
-            //    var randomID= Math.floor(Math.random()*4);
-            //        $scope.beginner.push(beginner.data.id.(randomID));
-            //}
-
-    //
-    //
-    //
     //$scope.intermediate = {};
     //$scope.intermediates = [];
     //
     //$scope.getQuestion2 = function(){
     //    //make the call to ('/intermediate'), then do a function
-    //    $http.get('/intermediate').then(function(intermediate){
+    //    $http.get('/intermediate/').then(function(intermediate){
     //        console.log(intermediate.data);
     //        console.log("why?");
     //        // assigning all of you tasks in a $scope.blank
@@ -167,13 +137,16 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
     //
     //$scope.getQuestion2();
     //
-    //
+    // // click skip and go to next question //or
+
+    // after 3 questions, go to Intermediate questions
+
     //$scope.final = {};
     //$scope.finals = [];
     //
     //$scope.getQuestion3 = function(){
     //    //make the call to ('/final'), then do a function
-    //    $http.get('/final').then(function(final){
+    //    $http.get('/final/').then(function(final){
     //        console.log(final.data);
     //        console.log("YES?");
     //        // assigning all of you tasks in a $scope.blank
