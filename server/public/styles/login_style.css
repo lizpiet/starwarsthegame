@@ -25,7 +25,7 @@ h1{
   font-weight: bold;
   text-align: center;
   color: #FFFCEE;
-  margin-bottom: 35px;
+  margin: 37px 0 5px 0;
 }
 
 .force{
@@ -33,7 +33,7 @@ h1{
 }
 
 h2{
-  padding-top:65px;
+  padding-top:42px;
   font: 44px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
@@ -63,7 +63,7 @@ h4{
   font-weight: bold;
   /*float:right;*/
   text-align: right;
-  margin: 10px 200px;
+  margin: -15px 200px 30px 0;
   color: #FFFCEE;
   padding-bottom:29px;
 }
@@ -174,9 +174,10 @@ input.login{
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
-  margin: 24px 42px 0 0;
+  margin: -38px 35px 0 0;
   letter-spacing: 5px;
-  float:right;
+  float: right;
+  clear: both;
 }
 .new-main:hover {
   color: #FFFCEE;
@@ -235,7 +236,7 @@ input.login{
   border-color: transparent;
   padding: 6px 30px;
   letter-spacing: 1px;
-  margin: -54px 65px;
+  margin: 54px 65px;
   color: #FFFCEE;
   background-color: lawngreen;
   text-decoration: none;
@@ -245,7 +246,6 @@ input.login{
 
 
 .answer{
-  float:right;
   font: 29px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
@@ -255,7 +255,7 @@ input.login{
   /*margin: 64px 65px;*/
   color: #FFFCEE;
   background-color: lawngreen;
-  margin: 0 50% 0 200px;
+  margin: 0 0 0 40%;
 }
 
 .skip:hover{
@@ -267,12 +267,12 @@ input.login{
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
-  padding: 6px 30px;
+  padding: 5px 30px;
   letter-spacing: 1px;
   /*margin: 64px 65px;*/
   color: #FFFCEE;
   background-color: red;
-  margin: 0 65px 0 200px;
+  margin: 0 10% 0 0;
 }
 
 .answer:hover{
@@ -339,17 +339,16 @@ input.login{
 
 
 
-
-
-
-
-
 /*trivia game*/
+
+/*#main{*/
+  /*width:100%;*/
+  /*padding: 200px 0;*/
+/*}*/
 
 #beginnerQuestion{
   font: 35px play, Helvetica, Arial, sans-serif;
-  margin-left: 10%;
-  margin-bottom: 15px;
+  margin: 0 7% 25px 10%;
   letter-spacing: 1px;
   font-weight: bold;
   color: #FFFCEE;
@@ -371,9 +370,6 @@ input.login{
   color: #FFFCEE;
 }
 
-
-
-
 .fourAnswers{
   font: 30px play, Helvetica, Arial, sans-serif;
   margin-left: 10%;
@@ -383,14 +379,20 @@ input.login{
   color: #FFFCEE;
   list-style-type: none;
 }
-
-
+input[type="radio" ]{
+  color:#FFFCEE;
+  width:29px;
+  height:29px;
+  /*border-width: 2px;*/
+  /*border-color: red;*/
+}
 
 .moveAlong{
   font: 28px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
-  margin: 15px 0 0 25px;
+  margin: 0 10% 0 0;
+  float: right;
   color: #FFFCEE;
   background-color: lawngreen;
   border-radius: 10px;
@@ -403,9 +405,9 @@ input.login{
   background-color:#FFFCEE;
 }
 
-
-
-
+.recordScore{
+  margin: 0 0 0 5%;
+}
 
 a{
   text-decoration: none;

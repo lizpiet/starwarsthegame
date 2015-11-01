@@ -18,13 +18,5 @@ app.controller('GameController', ['$scope', function($scope) {
             $scope.points = 300;
         }
 
-        //$scope.$parent.showRightWrong = false;
-    //};
-
-    //$scope.points = $scope.points;
-
-    //getPoints();
-
-    //$scope.message = points earned
 
 }]);

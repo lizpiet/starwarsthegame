@@ -34,6 +34,12 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.showRightWrong = false;
 
+    if ($scope.currentLevel = 1){
+        $scope.points = 100;
+    }else if($scope.currentLevel = 2)
+    {$scope.points = 200;}
+    else{$scope.points = 300;}
+
     //////get questions
 
     $scope.getQuestion = function(){
@@ -60,18 +66,14 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
             //if / else, // check questions so they aren't repeated
 
         //make the call to ('/beginner'), then do a function
-        //$http.get('/beginner/' + randomID).then(function(beginner){
         $http.get(urlSet + randomID).then(function(response){
 
             console.log(response.data[0]);
             console.log("will this ever work?");
             // assigning all of you tasks in a $scope.blank
-            //$scope.beginners=response.data;
 
             $scope.questions = response.data;
 
-            //$scope.currentQuestion = $scope.beginners[$scope.currentQuestionIndex];
-            //$scope.currentQuestion = $scope.beginners[0];
             $scope.currentQuestion = $scope.questions[0];
 
             $scope.questionIndex++;
@@ -83,7 +85,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.questions = [];
     $scope.score="";
-    $scope.beginnerPoints = 100;
+    //$scope.beginnerPoints = 100;
 
     $scope.checkAnswers = function(){
 
@@ -101,11 +103,17 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //  go to page /win,
                     $location.path('/win');
 
+
+                   // do if else here //
                     // display "You Win X Points"
                     // request to server, Add points to the database,
                     $http.post('/points', {points: $scope.points}).then(function (res){
                         console.log('Am i working?');
-                        console.log(res.data);
+                        //console.log($scope.score);
+                        //console.log(res.data);
+                        console.log($scope.points);
+                        $scope.score=res.data;
+
                         if(res.data){
                             $scope.score=res.data;
                         } else {
@@ -113,28 +121,12 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                         }
                         console.log($scope.score);
 
-                        //increment counter and current level
-                        //$scope.currentQuestionIndex ++;
-                        //if ($scope.currentQuestionIndex >= 3)
-                        // {$scope.currentLevel++}
-                        //if ($scope.currentLevel == 2){
-                        //    console.log("Going to level 2");
-                        //    //$scope.getQuestion2();
-                        //}
-
                     });
 
                     // append points to screen // done on userHome.html {{score.score}}
 
                         //On either move along or skip,
                     //  Change current question //  Update View to next question
-                    // Use  $scope.currentQuestionIndex = 0; above to do that.
-
-
-                    //for (var i = 0; i < 4; i++) {
-                    //    $scope.currentQuestion=$scope.currentQuestionIndex;
-                    //    $scope.currentQuestionIndex ++;
-                    //}
 
                 } else {
                     alert('Wrong!');
@@ -153,26 +145,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.getQuestion();
 
-            // click skip and go to next question //or
-
-            // after 3 questions, go to Intermediate questions
-
-    $scope.intermediates = [];
-    //$scope.currentLevel = 1;
-
-    $scope.getQuestion2 = function(){
-        //make the call to ('/intermediate'), then do a function
-        $http.get('/intermediate/').then(function(intermediate){
-            console.log(intermediate.data);
-            console.log("why?");
-            // assigning all of you tasks in a $scope.blank
-            $scope.intermediates=intermediate.data;
-        });
-    };
-
-
-    //$scope.getQuestion2();
-
     $http.post('/points', {points: $scope.points}).then(function (res){
         console.log('Am i working?');
         console.log(res.data);
@@ -183,26 +155,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         }
         console.log($scope.score);
     });
-    //
-    // // click skip and go to next question //or
-
-    // after 3 questions, go to Intermediate questions
-
-    //$scope.finals = [];
-    //$scope.currentLevel = 2;
-    //
-    //$scope.getQuestion3 = function(){
-    //    //make the call to ('/final'), then do a function
-    //    $http.get('/final/').then(function(final){
-    //        console.log(final.data);
-    //        console.log("YES?");
-    //        // assigning all of you tasks in a $scope.blank
-    //        $scope.finals=final.data;
-    //    });
-    //};
-    //
-    //
-    //$scope.getQuestion3();
 
 }]);
 

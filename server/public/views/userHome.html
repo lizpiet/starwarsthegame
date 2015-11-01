@@ -22,7 +22,6 @@
         <a href="/"></a>
     </div>
 
-
     <div class="score">
         <a href="/register">SCORE <br/> BOARD</a>
     </div>
@@ -33,6 +32,16 @@
 
             <h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>
                 <p class="quote">- Han Solo</p>
+
+    <div ng-show="showRightWrong">
+        <div id="main">
+
+            <ng-view>
+
+            </ng-view>
+
+        </div>
+    </div>
 
                     <div id="beginnerQuestion">{{currentQuestion.title}}</div>
                     <div id="intermediateQuestion" >{{intermediate.title}}</div>
@@ -47,29 +56,33 @@
         </ul>
     </div>
 
-    <div ng-show="showRightWrong">
-        <div id="main">
+    <!--<div ng-show="showRightWrong">-->
+        <!--<div id="main">-->
 
-            <ng-view>
+            <!--<ng-view>-->
 
-            </ng-view>
+            <!--</ng-view>-->
 
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
 
-    <div>
-        <h4> total score: <br/> {{score.score}}</h4>
-    </div>
+
 
     <div>
         <button type="submit" class="skip" value="skip" ng-click="getQuestion()" >skip</button>
         <a href="/"></a>
+
+        <!--<div>-->
+            <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
+
+        <!--</div>-->
     </div>
 
-    <div>
-        <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
-
+    <div class="recordScore">
+        <h4> total score: <br/> {{score.score}}</h4>
     </div>
+
+
 
     </body>
 </html>
