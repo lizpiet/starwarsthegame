@@ -6,7 +6,7 @@ app.controller('GameController', ['$scope', function($scope) {
 
 
     $scope.message = "Correct Answer!!!";
-
+    $scope.points = 0;
     //getPoints = function() {
         if ($scope.currentLevel == 1) {
             $scope.points = 100;

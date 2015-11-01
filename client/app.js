@@ -26,6 +26,8 @@ app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $lo
 app.controller("IndexController", ['$scope', '$http', '$location', function($scope, $http, $location){
 
     $scope.levelTitle = "Beginner Level";
+    $scope.movieQuote = "Hokey religions and ancient weapons are no match for a good blaster at your side, kid.";
+    $scope.person = "- Han Solo";
     $scope.questions = [];
     $scope.selectedAnswer={};
 
@@ -35,11 +37,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.showRightWrong = false;
 
-    //if ($scope.currentLevel = 1){
-    //    $scope.points = 100;
-    //}else if($scope.currentLevel = 2)
-    //{$scope.points = 200;}
-    //else{$scope.points = 300;}
 
     //////get questions
 
@@ -48,14 +45,20 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
         $scope.showRightWrong = false;
 
+
+
         if($scope.questionIndex == 2 && $scope.currentLevel < 3){
             $scope.currentLevel++;
             $scope.levelTitle = "Intermediate Level";
+            $scope.movieQuote = "“Don't call me a mindless philosopher, you overweight glob of grease.”";
+            $scope.person = "- C-3PO";
             $scope.questionIndex = 0;
 
         } else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
             $scope.currentLevel = 1;
             $scope.levelTitle = "Advanced Level";
+            $scope.movieQuote = "Remember, a Jedi's strength flows from the Force. But beware. Anger, fear, aggression. The dark side are they. Once you start down the dark path, forever will it dominate your destiny.";
+            $scope.person = "- Yoda";
             $scope.questionIndex = 0;
 
         }
@@ -87,11 +90,15 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         });
     };
 
+
+
     //////////// check answers /// go to next question
 
     $scope.questions = [];
     $scope.score="";
     //$scope.beginnerPoints = 100;
+
+
 
     $scope.checkAnswers = function(){
 
@@ -155,9 +162,27 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //go to page, display "You Lose X Points"  // click Move along button
                     $location.path('/lose');
 
-                    //Subtract points to the database, append points to screen
 
-                    //Change current question  //Update View to next question
+                    $http.post('/points', {points: $scope.points}).then(function (res) {
+                        console.log('Am i working part 2?');
+                        //console.log($scope.score);
+
+                        //Subtract points to the database, append points to screen
+                        if ($scope.currentLevel == 1) {
+                            $scope.points = 0;
+                        } else if ($scope.currentLevel == 2) {
+                            $scope.points = -50;
+                        }
+                        else {
+                            $scope.points = 50;
+                        }
+
+                        //console.log(res.data);
+                        console.log($scope.points);
+                        $scope.score=res.data;
+
+                        //Change current question  //Update View to next question
+                    })
                 }
             }
         }

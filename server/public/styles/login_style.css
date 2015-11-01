@@ -17,7 +17,7 @@ body {
   font: 14px play, Helvetica, Arial, sans-serif;
 
   margin: 0;
-  padding: 0 0 11%;
+  padding: 0 0 14%
 }
 h1{
   font: 87px play, Helvetica, Arial, sans-serif;
@@ -55,6 +55,7 @@ h4{
   color: #3A8BCA;
   margin-top: 0;
   line-height: 40px;
+  padding: 3% 0 30% 0;
 }
 
 .quote{
@@ -296,6 +297,7 @@ input.login{
 }
 .imageClass {
   float: left;
+  margin: 0 4% 13px 5%;
 }
 .badges {
   margin: 0 0 0 29px;
@@ -309,12 +311,15 @@ input.login{
   font: 44px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
+  margin: -18px 0 0 0;
 }
 .badges p{
-  color:#FFFCEE;
+  /*color:#FFFCEE;*/
+  color: #3A8BCA;
   font: 34px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
+  margin: -39px 5% 0 0;
 }
 
 .one{
@@ -421,10 +426,15 @@ a:hover{
   padding:66px 0;
 }
 
-h3{
+.animate {
   font: 32px play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
   color: #FFFCEE;
   margin: -37px 0 0 10%;
 }
+
+
+
+
+
