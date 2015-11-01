@@ -25,6 +25,7 @@ app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $lo
 
 app.controller("IndexController", ['$scope', '$http', '$location', function($scope, $http, $location){
 
+    $scope.levelTitle = "Beginner Level";
     $scope.questions = [];
     $scope.selectedAnswer={};
 
@@ -34,24 +35,29 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.showRightWrong = false;
 
-    if ($scope.currentLevel = 1){
-        $scope.points = 100;
-    }else if($scope.currentLevel = 2)
-    {$scope.points = 200;}
-    else{$scope.points = 300;}
+    //if ($scope.currentLevel = 1){
+    //    $scope.points = 100;
+    //}else if($scope.currentLevel = 2)
+    //{$scope.points = 200;}
+    //else{$scope.points = 300;}
 
     //////get questions
 
     $scope.getQuestion = function(){
         console.log("Current level is: ", $scope.currentLevel);
+
         $scope.showRightWrong = false;
 
         if($scope.questionIndex == 2 && $scope.currentLevel < 3){
             $scope.currentLevel++;
+            $scope.levelTitle = "Intermediate Level";
             $scope.questionIndex = 0;
+
         } else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
             $scope.currentLevel = 1;
+            $scope.levelTitle = "Advanced Level";
             $scope.questionIndex = 0;
+
         }
 
         var urlSet ="";
@@ -94,7 +100,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         for(var i = 0; i < $scope.currentQuestion.fourAnswers.length; i++){
             if($scope.selected == $scope.currentQuestion.fourAnswers[i].text){
                 if($scope.currentQuestion.fourAnswers[i].answer){
-                    alert('Correct!');
+
                     $scope.showRightWrong = true;
 
                     console.log($scope.currentQuestion.fourAnswers[i].answer);
@@ -107,13 +113,28 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                    // do if else here //
                     // display "You Win X Points"
                     // request to server, Add points to the database,
+
+
                     $http.post('/points', {points: $scope.points}).then(function (res){
                         console.log('Am i working?');
                         //console.log($scope.score);
+
+
+                        if ($scope.currentLevel == 1){
+                            $scope.points = 100;
+                        }else if($scope.currentLevel == 2)
+                        {$scope.points = 200;}
+                        else{$scope.points = 300;}
+
+
+
                         //console.log(res.data);
                         console.log($scope.points);
                         $scope.score=res.data;
 
+
+                        // this is adding previous score to the total score on the screen
+                        // do not change
                         if(res.data){
                             $scope.score=res.data;
                         } else {
@@ -129,7 +150,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //  Change current question //  Update View to next question
 
                 } else {
-                    alert('Wrong!');
                     $scope.showRightWrong = true;
 
                     //go to page, display "You Lose X Points"  // click Move along button
