@@ -17,7 +17,7 @@ body {
   font: 14px play, Helvetica, Arial, sans-serif;
 
   margin: 0;
-  padding: 0 0 14%
+  padding: 0 0 16%
 }
 h1{
   font: 87px play, Helvetica, Arial, sans-serif;
@@ -243,10 +243,11 @@ input.login{
   color: #FFFCEE;
   background-color: lawngreen;
   text-decoration: none;
-
 }
 
-
+.loginhome:hover{
+  color:black;
+}
 
 .answer{
   font: 29px play, Helvetica, Arial, sans-serif;
@@ -280,7 +281,6 @@ input.login{
 
 .answer:hover{
   color:black;
-
 }
 
 /*.hlogin{*/
@@ -296,6 +296,9 @@ input.login{
   font-weight: bold;
   letter-spacing: 2px;
   margin: 15px 0 0 55px;
+}
+a:hover{
+  color:red;
 }
 .imageClass {
   float: left;
@@ -343,8 +346,6 @@ input.login{
 #levels{
   padding-bottom: 30%;
 }
-
-
 
 /*trivia game*/
 
@@ -451,5 +452,7 @@ margin: 0 0 0 0;
   clear: both;
   margin: -12px 19px 2px 65px;
 }
+
+button:focus {outline:0;}
 
 
