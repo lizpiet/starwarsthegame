@@ -220,12 +220,12 @@ h1 sub
 
 .home {
     text-decoration: none;
-    margin: 55px 0 0 55px;
+    margin: 10px 0 0 22px;
     padding:16px 16px;
     font: 25px play, Helvetica, Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
-    color: red;
+    color: #4ee;
     background-color: black;
     border-color: transparent;
 

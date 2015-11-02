@@ -37,7 +37,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
     $scope.showRightWrong = false;
 
-
     //////get questions
 
     $scope.getQuestion = function(){
@@ -45,23 +44,20 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
         $scope.showRightWrong = false;
 
-
-
-        if($scope.questionIndex == 2 && $scope.currentLevel < 3){
-            $scope.currentLevel++;
-            $scope.levelTitle = "Intermediate Level";
-            $scope.movieQuote = "“Don't call me a mindless philosopher, you overweight glob of grease.”";
-            $scope.person = "- C-3PO";
-            $scope.questionIndex = 0;
-
-        } else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
-            $scope.currentLevel = 1;
-            $scope.levelTitle = "Advanced Level";
-            $scope.movieQuote = "They never even ask me any questions....";
-            $scope.person = "- Han Solo";
-            $scope.questionIndex = 0;
-
-        }
+        //if($scope.questionIndex == 2 && $scope.currentLevel < 3){
+        //    $scope.currentLevel++;
+        //    $scope.levelTitle = "Intermediate Level";
+        //    $scope.movieQuote = "“Don't call me a mindless philosopher, you overweight glob of grease.”";
+        //    $scope.person = "- C-3PO";
+        //    $scope.questionIndex = 0;
+        //
+        //} else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
+        //    $scope.currentLevel = 1;
+        //    $scope.levelTitle = "Advanced Level";
+        //    $scope.movieQuote = "They never even ask me any questions....";
+        //    $scope.person = "- Han Solo";
+        //    $scope.questionIndex = 0;
+        //}
 
         var urlSet ="";
         if ($scope.currentLevel == 1)
@@ -87,18 +83,28 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
             $scope.questionIndex++;
 
+            if($scope.questionIndex == 2 && $scope.currentLevel < 3){
+                $scope.currentLevel++;
+                $scope.levelTitle = "Intermediate Level";
+                $scope.movieQuote = "“Don't call me a mindless philosopher, you overweight glob of grease.”";
+                $scope.person = "- C-3PO";
+                $scope.questionIndex = 0;
+
+            } else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
+                $scope.currentLevel = 1;
+                $scope.levelTitle = "Advanced Level";
+                $scope.movieQuote = "They never even ask me any questions....";
+                $scope.person = "- Han Solo";
+                $scope.questionIndex = 0;
+            }
         });
     };
-
-
 
     //////////// check answers /// go to next question
 
     $scope.questions = [];
     $scope.score="";
-    //$scope.beginnerPoints = 100;
-
-
+    //$scope.points = 100;
 
     $scope.checkAnswers = function(){
 
@@ -116,16 +122,13 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                     //  go to page /win,
                     $location.path('/win');
 
-
                    // do if else here //
                     // display "You Win X Points"
                     // request to server, Add points to the database,
 
-
                     $http.post('/points', {points: $scope.points}).then(function (res){
                         console.log('Am i working?');
                         //console.log($scope.score);
-
 
                         if ($scope.currentLevel == 1){
                             $scope.points = 100;
@@ -133,12 +136,9 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                         {$scope.points = 200;}
                         else{$scope.points = 300;}
 
-
-
                         //console.log(res.data);
                         console.log($scope.points);
                         $scope.score=res.data;
-
 
                         // this is adding previous score to the total score on the screen
                         // do not change
@@ -147,13 +147,13 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
                         } else {
                             $scope.score = 0;
                         }
-                        console.log($scope.score);
+                        //console.log($scope.score);
 
                     });
 
                     // append points to screen // done on userHome.html {{score.score}}
 
-                        //On either move along or skip,
+                    //On either move along or skip,
                     //  Change current question //  Update View to next question
 
                 } else {
@@ -161,7 +161,6 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
 
                     //go to page, display "You Lose X Points"  // click Move along button
                     $location.path('/lose');
-
 
                     $http.post('/points', {points: $scope.points}).then(function (res) {
                         console.log('Am i working part 2?');
@@ -202,10 +201,4 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
     });
 
 }]);
-
-
-
-
-
-
 
