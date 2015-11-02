@@ -24,11 +24,11 @@ p#start
     color: #4ee;
     opacity: 0;
     z-index: 1;
-    -webkit-animation: intro 4s ease-out;
-    -moz-animation: intro 4s ease-out;
-    -ms-animation: intro 4s ease-out;
-    -o-animation: intro 4s ease-out;
-    animation: intro 4s ease-out;
+    -webkit-animation: intro 3s ease-out;
+    -moz-animation: intro 3s ease-out;
+    -ms-animation: intro 3s ease-out;
+    -o-animation: intro 3s ease-out;
+    animation: intro 3s ease-out;
 }
 
 @-webkit-keyframes intro {
@@ -225,8 +225,10 @@ h1 sub
     font: 25px play, Helvetica, Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #FFFCEE;
+    color: red;
     background-color: black;
     border-color: transparent;
 
 }
+
+

@@ -57,8 +57,8 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         } else if ($scope.questionIndex == 2 && $scope.currentLevel == 3) {
             $scope.currentLevel = 1;
             $scope.levelTitle = "Advanced Level";
-            $scope.movieQuote = "Remember, a Jedi's strength flows from the Force. But beware. Anger, fear, aggression. The dark side are they. Once you start down the dark path, forever will it dominate your destiny.";
-            $scope.person = "- Yoda";
+            $scope.movieQuote = "They never even ask me any questions....";
+            $scope.person = "- Han Solo";
             $scope.questionIndex = 0;
 
         }
@@ -70,7 +70,7 @@ app.controller("IndexController", ['$scope', '$http', '$location', function($sco
         {urlSet = '/intermediate/'}
         else {urlSet = '/final/'}
 
-        var randomID= Math.floor(Math.random() * 4);
+        var randomID= Math.floor(Math.random() * 9);
 
             //if / else, // check questions so they aren't repeated
 

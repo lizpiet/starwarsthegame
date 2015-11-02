@@ -437,15 +437,19 @@ a:hover{
 }
 
 .badgeSm2{
-margin: 15px 0 0 0;
-
-}
-.smallClass{
-margin: 0 29px;
+margin: 0 0 0 0;
 
 }
 
 
+.badgeSm{
+  margin: 50px 0 -4px 59px;
+}
 
+.smallClass {
+  float: left;
+  clear: both;
+  margin: -12px 19px 2px 65px;
+}
 
 
