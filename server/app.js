@@ -16,6 +16,8 @@ var Final = require('../models/final');
 var routes = require('./routes/main');
 var index = require('./routes/index');
 
+var scoreBoard = require('./routes/scoreBoard');
+
 var users = require('./routes/users');
 
 var beginner = require('./routes/beginner');
@@ -99,6 +101,7 @@ app.use('/index', index);
 app.use('/beginner', beginner);
 app.use('/intermediate', intermediate);
 app.use('/final', final);
+app.use('/scoreBoard', scoreBoard);
 
 
 //app.get('/', function(req, res){

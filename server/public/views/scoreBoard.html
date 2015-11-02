@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app2">
+<head>
+    <base href="/">
+    <script src ="/vendors/angular/angular.min.js" type="text/javascript"></script>
+    <!--<script src ="/vendors/angular-route/angular-route.min.js" type="text/javascript"></script>-->
+    <script src ="/assets/scripts/app.min.js" type="text/javascript"></script>
+    <!--<link rel="stylesheet" href="../styles/login_style.css">-->
+    <link rel="stylesheet" href="../styles/scores_style.css">
+
+
+    <meta charset="UTF-8">
+    <title>Star Wars: The Game</title>
+</head>
+
+<body ng-Controller="ScoreController">
+
+    <div>
+         <a href="/"><button class="home">home </button></a>
+    </div>
+
+            <p id="start">A short time ago in a trivia game, very close&hellip;</p>
+
+        <h1>STAR WARS<sub>THE GAME</sub></h1>
+
+    <div id="titles"><div id="titlecontent">
+
+        <p class="center">SCORE BOARD</p>
+
+        <p>A long long time ago, in a galaxy far far away, a group of nerds band together in hopes of finding something new to watch on Netflix.</p>
+
+        <p>It was a dark time for the nerds. Although many steroetypes have been destroyed since the 1980's, blah, blah, blah. This was the galaxy's most terrifying threat since the Death Star. </p>
+
+        <p>This is their story and these are those nerds......</p>
+
+
+        <ul>
+            <li>
+                {{score.score}}
+            </li>
+        </ul>
+
+    </div></div>
+
+
+</body>
+</html>

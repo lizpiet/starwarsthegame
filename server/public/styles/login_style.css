@@ -46,6 +46,8 @@ h4{
   font-weight: bold;
   color: #FFFCEE;
   margin-bottom: 15px;
+  margin-top: 94px;
+
 
 }
 #levels p{
@@ -432,6 +434,15 @@ a:hover{
   letter-spacing: 2px;
   color: #FFFCEE;
   margin: -37px 0 0 10%;
+}
+
+.badgeSm2{
+margin: 15px 0 0 0;
+
+}
+.smallClass{
+margin: 0 29px;
+
 }
 
 
