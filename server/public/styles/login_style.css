@@ -10,22 +10,49 @@ html {
 
 body {
   border: 26px solid #FFFCEE;
-  /*border-radius:26px;*/
   -webkit-border-radius: 46px;
   -moz-border-radius: 46px;
   background-image: url("/assets/images/noise.png");
   font: 14px play, Helvetica, Arial, sans-serif;
-
   margin: 0;
-  padding: 0 0 16%
+  padding: 0 0 17% 0;
 }
+
+.navigation{
+  display: block;
+  margin: 33px 0 0 0;
+  padding: 0 0 57px 0;
+
+}
+
+.nav-main{
+  float: left;
+  margin: 0 0 0 5%;
+}
+
+.nav-main-logout{
+  float: right;
+  margin: 0 5%;
+}
+/*.nav-main-mid{*/
+  /*float: left;*/
+  /*margin: 0 12%;*/
+/*}*/
+
+ul{
+  list-style-type: none;
+  /* width: 100%; */
+  padding: 0 0 0 0;
+}
+
 h1{
-  font: 87px play, Helvetica, Arial, sans-serif;
+  font: 5em play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
   color: #FFFCEE;
-  margin: 37px 0 5px 0;
+  margin: 15px 0 35px 0;
+  clear: both;
 }
 
 .force{
@@ -33,20 +60,22 @@ h1{
 }
 
 h2{
-  padding-top:42px;
-  font: 44px play, Helvetica, Arial, sans-serif;
+  padding-top: 27px;
+  font: 2.7em play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
-  margin: 0 250px;
+  margin: 0 auto;
+  width: 59%;
   color: #3A8BCA;
 }
+
 h4{
   font: 35px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   color: #FFFCEE;
   margin-bottom: 15px;
-  margin-top: 94px;
+  margin-top: 34px;
 
 
 }
@@ -56,22 +85,21 @@ h4{
   font-weight: bold;
   color: #3A8BCA;
   margin-top: 0;
-  line-height: 40px;
-  padding: 3% 0 30% 0;
+  line-height: 33px;
 }
 
 .quote{
-  font: 30px play, Helvetica, Arial, sans-serif;
+  font: 2em play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   /*float:right;*/
   text-align: right;
-  margin: 0 200px 30px 0;
+  margin: 0px 20% 21px 0;
   color: #FFFCEE;
   padding-bottom:29px;
 }
 .logs{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 2.2em play, Helvetica, Arial, sans-serif;
   letter-spacing: 5px;
   font-weight: bold;
   text-align: center;
@@ -97,28 +125,23 @@ h4{
 
 #home-form{
   margin: 56px 0 0 56px;
-
-
 }
+
 .home{
   background-color: red;
-  border-radius: 12px;
+  border-radius: 10px;
   border-color: transparent;
-  /*width: 97px;*/
-  /*height: 17px;*/
-  /*margin: 64px 0 0 65px;*/
-  margin: 55px 0 0 55px;
-  padding:6px 16px;
-  /*margin-top: 8px;*/
-  font: 25px play, Helvetica, Arial, sans-serif;
+   margin: 0 0 0 0;
+  padding: 6px 16px;
+  font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   color: #FFFCEE;
 }
 
 #login-form{
-  display:block;
-  margin:125px auto;
+  display: block;
+  margin: 55px auto;
   text-align: center;
 
 }
@@ -129,7 +152,7 @@ input.login{
 }
 
 .submit{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -173,11 +196,11 @@ input.login{
 }
 
 .new-main   {
-  font: 29px play;
+  font: 1.5em play;
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
-  margin: -38px 35px 0 0;
+  margin: 0 2.5% 0 0;
   letter-spacing: 5px;
   float: right;
   clear: both;
@@ -216,14 +239,14 @@ input.login{
 }
 
 .logout{
-  float:right;
-  font: 29px play, Helvetica, Arial, sans-serif;
+  /* float: right; */
+  font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
   padding: 6px 30px;
   letter-spacing: 1px;
-  margin: 54px 65px;
+  /* margin: 3% 5%; */
   color: #FFFCEE;
   background-color: lawngreen;
 }
@@ -232,14 +255,14 @@ input.login{
   color:black;
 }
 .loginhome{
-  float:right;
-  font: 29px play, Helvetica, Arial, sans-serif;
+  float: right;
+  font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
-  padding: 6px 30px;
+  padding: 6px 22px;
   letter-spacing: 1px;
-  margin: 54px 65px;
+  margin: 3% 5% 19px;
   color: #FFFCEE;
   background-color: lawngreen;
   text-decoration: none;
@@ -250,7 +273,7 @@ input.login{
 }
 
 .answer{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -267,13 +290,12 @@ input.login{
 }
 .skip{
   float:right;
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
   padding: 5px 30px;
   letter-spacing: 1px;
-  /*margin: 64px 65px;*/
   color: #FFFCEE;
   background-color: red;
   margin: 0 10% 0 0;
@@ -283,19 +305,15 @@ input.login{
   color:black;
 }
 
-/*.hlogin{*/
-  /*color:#FFFCEE;*/
-  /*text-decoration: none;*/
-/*}*/
-/*.loginhome:hover{*/
-  /*color:black;*/
-/*}*/
-
 .score{
-  font: 28px play, Helvetica, Arial, sans-serif;
+  font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
-  margin: 15px 0 0 55px;
+  clear: both;
+}
+
+.score-tag{
+  margin: 0 0 0 0;
 }
 a:hover{
   color:red;
@@ -305,32 +323,34 @@ a:hover{
   margin: 0 4% 13px 5%;
 }
 .badges {
-  margin: 0 0 0 29px;
+  margin: 0 0 0 3%;
   width: 95%;
   clear: both;
-  padding: 30px 0;
 }
 
-.badgeTitle{
-  color:#FFFCEE;
-  font: 44px play, Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
+.main-quotes{
+  color: #FFFCEE;
+  font: 2.3em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
-  margin: -18px 0 0 0;
+  letter-spacing: 1px;
+  padding: 32px 0 0 0;
+  margin: 0 0 0 0;
 }
+
 .badges p{
   /*color:#FFFCEE;*/
   color: #3A8BCA;
-  font: 34px play, Helvetica, Arial, sans-serif;
+  font: 29px play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
-  margin: -39px 5% 0 0;
+  margin: 4px 5% 0 0;
 }
 
 .one{
   float:left;
   width: 25%;
   margin: 0 2% 0 6%;
+  clear: both;
 
 }
 .two{
@@ -344,55 +364,48 @@ a:hover{
   margin: 0 4%;
 }
 #levels{
-  padding-bottom: 30%;
+  padding: 0 0 63% 0;
 }
-
-/*trivia game*/
-
-/*#main{*/
-  /*width:100%;*/
-  /*padding: 200px 0;*/
-/*}*/
 
 #beginnerQuestion{
-  font: 35px play, Helvetica, Arial, sans-serif;
-  margin: 0 7% 25px 10%;
+  font: 2em play, Helvetica, Arial, sans-serif;
+  margin: 37px auto 0;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #FFFCEE;
+  color: #3A8BCA;
+  width: 68%;
 }
 #intermediateQuestion{
-  font: 35px play, Helvetica, Arial, sans-serif;
-  margin-left: 10%;
-  margin-bottom: 15px;
+  font: 2em play, Helvetica, Arial, sans-serif;
+  margin: 37px auto 0;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #FFFCEE;
+  color: #3A8BCA;
+  width: 68%;
 }
 #finalQuestion{
-  font: 35px play, Helvetica, Arial, sans-serif;
-  margin-left: 10%;
-  margin-bottom: 15px;
+  font: 2em play, Helvetica, Arial, sans-serif;
+  margin: 37px auto 0;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #FFFCEE;
+  color: #3A8BCA;
+  width: 68%;
 }
 
 .fourAnswers{
-  font: 30px play, Helvetica, Arial, sans-serif;
-  margin-left: 10%;
-  margin-bottom: 15px;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
+  margin: 9px auto;
+  width: 62%;
   letter-spacing: 1px;
   font-weight: bold;
   color: #FFFCEE;
   list-style-type: none;
 }
 input[type="radio" ]{
-  color:#FFFCEE;
-  width:29px;
-  height:29px;
-  /*border-width: 2px;*/
-  /*border-color: red;*/
+  color: #FFFCEE;
+  width: 20px;
+  height: 19px;
+  margin: 0px 19px 0 0;
 }
 
 .moveAlong{
@@ -442,7 +455,6 @@ margin: 0 0 0 0;
 
 }
 
-
 .badgeSm{
   margin: 50px 0 -4px 59px;
 }
@@ -455,4 +467,6 @@ margin: 0 0 0 0;
 
 button:focus {outline:0;}
 
-
+.radio-button{
+  margin: 0 20px 0 0;
+}

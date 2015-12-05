@@ -6,65 +6,56 @@
     <script src ="/vendors/angular-route/angular-route.min.js" type="text/javascript"></script>
     <script src ="/assets/scripts/app.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../styles/login_style.css">
-
     <meta charset="UTF-8">
+
     <title>Star Wars: The Game</title>
 </head>
 
 <body ng-Controller="IndexController">
+<div id="levels">
+        <div>
+            <a href="/index" target="_self"><button type="submit" class="loginhome" value="log in">log in</button></a>
+            <a href="/register"  target="_self" class="new-main">new player</a>
+        </div>
 
+        <div>
+            <button type="submit" class="home" value="home"><a href="/">home</a></button>
+            <a href="/"></a>
+        </div>
 
-<div>
-    <a href="/index" target="_self"><button type="submit" class="loginhome" value="log in">log in</button></a>
-
-    <a href="/register"  target="_self" class="new-main">new player</a>
-
-
-</div>
-
-
-
-<div>
-    <button type="submit" class="home" value="home"><a href="/">home</a></button>
-    <a href="/"></a>
-</div>
-<!--change this to database scoreboard-->
-
-<div class="score">
-    <a href="/scoreBoard" target="_self">SCORE <br/> BOARD</a>
-</div>
+        <!--change this to database scoreboard-->
+        <div class="score">
+            <a href="/scoreBoard" target="_self">SCORE <br/> BOARD</a>
+        </div>
 
     <h1>Star Wars: The Game</h1>
         <h2>In my experience, there is no such thing as luck.</h2>
             <p class="quote">- Obi Wan</p>
 
     <div class="badges">
-        <img src="/assets/images/lightsaber.png" alt="lightsaber badge" width="220px" class="imageClass">
+        <img src="/assets/images/lightsaber.png" alt="lightsaber badge" width="180px" class="imageClass">
             <div class="badgeTitle">
-                <h3>This is the weapon of a Jedi Knight.</h3>
-            </div>
-            <div class="badgeP">
-                <p>Lightsaber Badges are worth 300 points</p>
+                <h3 class="main-quotes">This is the weapon of a Jedi Knight.</h3>
+                    <p class="badgeP">Lightsaber Badges are worth 300 points</p>
             </div>
     </div>
-    <div class="badges">
-        <img src="/assets/images/wookie.png" alt="wookie badge" width="220px" class="imageClass">
-            <div class="badgeTitle">
-                <h3>It's not wise to upset a Wookie</h3>
-            </div>
-        <p>Wookie Badges are worth 400 points</p>
-    </div>
-    <div class="badges">
-        <img src="/assets/images/falcon.png" alt="millenium falcon badge" width="220px" class="imageClass">
-            <div class="badgeTitle">
-                <h3>She may not look like much but she’s got it where it counts, kid</h3>
-            </div>
-            <div class="badgeP">
-                <p>Millenium Falcon Badges are worth 500 points</p>
-            </div>
-        </div>
 
-    <div id="levels">
+    <div class="badges">
+        <img src="/assets/images/wookie.png" alt="wookie badge" width="180px" class="imageClass">
+            <div class="badgeTitle">
+                <h3 class="main-quotes">It's not wise to upset a Wookie</h3>
+                    <p class="badgeP">Wookie Badges are worth 400 points</p>
+            </div>
+    </div>
+
+    <div class="badges">
+        <img src="/assets/images/falcon.png" alt="millenium falcon badge" width="180px" class="imageClass">
+            <div class="badgeTitle">
+                <h3 class="main-quotes">She may not look like much but she’s got it where it counts, kid</h3>
+                    <p class="badgeP">Millenium Falcon Badges are worth 500 points</p>
+            </div>
+    </div>
+
         <div class ="one">
             <h4>Level One</h4>
             <p>Level one answers are worth 100 points. There is no penalty for skipping

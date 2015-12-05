@@ -14,27 +14,49 @@
     <title>Star Wars: The Game</title>
 </head>
 <body ng-Controller="IndexController">
-    <div>
-        <a href="/" target="_self"><button type="submit" class="logout" value="log out">log out</button></a>
-    </div>
+<nav class="navigation">
+   <ul>
 
-    <div>
-        <a href="/" target="_self"><button type="submit" class="home" value="home">home</button>
-       </a>
-    </div>
-
-    <div class="score">
-        <a href="/scoreBoard" target="_self">SCORE <br/> BOARD</a>
-    </div>
+       <li class="nav-main">
+            <a href="/" target="_self"><button type="submit" class="home" value="home">home</button></a>
+       </li>
+       <li class="nav-main">
+           <div class="score">
+               <a href="/scoreBoard" target="_self">SCORE <br/> BOARD</a>
+           </div>
+       </li>
+       <li class="nav-main">
+            <p class="score-tag"> total score: <br/> {{score.score}}</p>
+       </li>
+       <li class="nav-main-logout">
+           <a href="/" target="_self"><button type="submit" class="logout" value="log out">log out</button></a>
+       </li>
+   </ul>
+</nav>
 
     <h1> {{levelTitle}} </h1>
+        <div id="beginnerQuestion">{{currentQuestion.title}}</div>
+                    <!--<div id="intermediateQuestion" >{{intermediate.title}}</div>-->
+                    <!--<div id="finalQuestion" >{{final.title}}</div>-->
 
-            <!--{{currentQuestion}}-->
-    <h2>{{movieQuote}}</h2>
-    <p class="quote">{{person}}</p>
-            <!--<h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>-->
-                <!--<p class="quote">- Han Solo</p>-->
-<div class="save">
+    <div>
+        <ul>
+            <li class="fourAnswers" ng-repeat="answer in currentQuestion.fourAnswers">
+                <input ng-model="$parent.selected" class="radio-button" type="radio" name="answerRadio" ng-value="answer.text">{{answer.text}}
+            </li>
+
+        </ul>
+    </div>
+
+    <div>
+        <button type="submit" class="skip" value="skip" ng-click="getQuestion()" >skip</button>
+        <a href="/"></a>
+
+            <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
+
+    </div>
+
+    <div class="save">
     <div ng-show="showRightWrong">
         <div id="main">
 
@@ -44,46 +66,12 @@
 
         </div>
     </div>
-</div>
-
-                    <div id="beginnerQuestion">{{currentQuestion.title}}</div>
-                    <!--<div id="intermediateQuestion" >{{intermediate.title}}</div>-->
-                    <!--<div id="finalQuestion" >{{final.title}}</div>-->
-
-    <div>
-        <ul>
-            <li class="fourAnswers" ng-repeat="answer in currentQuestion.fourAnswers">
-                <input ng-model="$parent.selected" type="radio" name="answerRadio" ng-value="answer.text">{{answer.text}}
-            </li>
-
-        </ul>
     </div>
-
-    <!--<div ng-show="showRightWrong">-->
-        <!--<div id="main">-->
-
-            <!--<ng-view>-->
-
-            <!--</ng-view>-->
-
-        <!--</div>-->
-    <!--</div>-->
-
-
-
-    <div>
-        <button type="submit" class="skip" value="skip" ng-click="getQuestion()" >skip</button>
-        <a href="/"></a>
-
-        <!--<div>-->
-            <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
-
-        <!--</div>-->
-    </div>
-
-    <div class="recordScore">
-        <h4> total score: <br/> {{score.score}}</h4>
-    </div>
+<!--{{currentQuestion}}-->
+<h2>{{movieQuote}}</h2>
+<p class="quote">{{person}}</p>
+<!--<h2>Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</h2>-->
+<!--<p class="quote">- Han Solo</p>-->
 
         <div>
             <img src="/assets/images/lightsaber_sm.png" alt="lightsaber_sm badge" width="70px" class="smallClass">   <h4 class="badgeSm">  : 10 </h4>

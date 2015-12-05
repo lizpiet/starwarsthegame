@@ -27,7 +27,7 @@ var final = require('./routes/final');
 var app = express();
 
 //mongoose set up
-var mongoURI = 'mongodb://localhost:27017/starwarsthegame';
+var mongoURI = 'mongodb://princessSlaya:hansolo@ds063134.mongolab.com:63134/starwarsthegame';
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err){
