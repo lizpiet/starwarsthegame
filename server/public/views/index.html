@@ -12,19 +12,21 @@
     <title>Star Wars: The Game</title>
 </head>
 <body>
-
-    <div>
-        <button type="submit" class="logout" value="log out"><a href="/">back</a></button>
-    </div>
-
-    <div>
-        <button type="submit" class="home" value="home"><a href="/">home</a></button>
-        <a href="/"></a>
-    </div>
-    <!--change this to database scoreboard-->
-    <div class="score">
-    <a href="/scoreBoard">SCORE <br/> BOARD</a>
-    </div>
+<nav class="navigation">
+    <ul>
+        <li class="nav-main">
+            <a href="/" target="_self"><button type="submit" class="home" value="home">home</button></a>
+        </li>
+        <li class="nav-main">
+            <div class="score">
+                <a href="/scoreBoard" target="_self">SCORE <br/> BOARD</a>
+            </div>
+        </li>
+        <li class="nav-main-logout">
+            <a href="/"><button type="submit" class="logout" value="log out">back</button></a>
+        </li>
+    </ul>
+</nav>
 
 
 <form action ="/index" method="POST" id="login-form">

@@ -200,7 +200,7 @@ input.login{
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
-  margin: 0 2.5% 0 0;
+  margin: 10px 2.5% 0 0;
   letter-spacing: 5px;
   float: right;
   clear: both;
@@ -244,7 +244,7 @@ input.login{
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
-  padding: 6px 30px;
+  padding: 6px 19px;
   letter-spacing: 1px;
   /* margin: 3% 5%; */
   color: #FFFCEE;
@@ -255,17 +255,31 @@ input.login{
   color:black;
 }
 .loginhome{
-  float: right;
+  /*float: right;*/
+  /*font: 1.5em play, Helvetica, Arial, sans-serif;*/
+  /*font-weight: bold;*/
+  /*border-radius: 10px;*/
+  /*border-color: transparent;*/
+  /*padding: 6px 22px;*/
+  /*letter-spacing: 1px;*/
+  /*margin: 3% 5% 19px;*/
+  /*color: #FFFCEE;*/
+  /*background-color: lawngreen;*/
+  /*text-decoration: none;*/
+  /* float: right; */
   font: 1.5em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
-  padding: 6px 22px;
+  padding: 6px 19px;
   letter-spacing: 1px;
-  margin: 3% 5% 19px;
+  /* margin: 3% 5%; */
   color: #FFFCEE;
   background-color: lawngreen;
-  text-decoration: none;
+}
+.nav-main-login {
+  float: right;
+  margin: 0 5%;
 }
 
 .loginhome:hover{
@@ -314,13 +328,16 @@ input.login{
 
 .score-tag{
   margin: 0 0 0 0;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 a:hover{
   color:red;
 }
 .imageClass {
   float: left;
-  margin: 0 4% 13px 5%;
+  margin: 0 5% 32px 7%;
 }
 .badges {
   margin: 0 0 0 3%;
@@ -330,10 +347,10 @@ a:hover{
 
 .main-quotes{
   color: #FFFCEE;
-  font: 2.3em play, Helvetica, Arial, sans-serif;
+  font: 2.7em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  padding: 32px 0 0 0;
+  padding: 41px 0 2px 0;
   margin: 0 0 0 0;
 }
 
