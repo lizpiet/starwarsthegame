@@ -46,12 +46,12 @@ ul{
 }
 
 h1{
-  font: 5em play, Helvetica, Arial, sans-serif;
+  font: 4.75em play, Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
   color: #FFFCEE;
-  margin: 15px 0 35px 0;
+  margin: 43px 0 0 0;
   clear: both;
 }
 
@@ -131,9 +131,9 @@ h4{
   background-color: red;
   border-radius: 10px;
   border-color: transparent;
-   margin: 0 0 0 0;
+  margin: 0 0 0 0;
   padding: 6px 16px;
-  font: 1.5em play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   color: #FFFCEE;
@@ -141,18 +141,18 @@ h4{
 
 #login-form{
   display: block;
-  margin: 55px auto;
+  margin: 108px auto;
   text-align: center;
 
 }
 
 input.login{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
 .submit{
-  font: 1.5em play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -168,7 +168,7 @@ input.login{
 }
 
 .register{
-  font: 29px play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -184,7 +184,7 @@ input.login{
 }
 
 .new-login   {
-  font: 29px play;
+  font: 1.87em play;
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
@@ -196,7 +196,7 @@ input.login{
 }
 
 .new-main   {
-  font: 1.5em play;
+  font: 1.87em play;
   font-weight: bold;
   color: lawngreen;
   text-decoration: none;
@@ -240,7 +240,7 @@ input.login{
 
 .logout{
   /* float: right; */
-  font: 1.5em play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -255,19 +255,7 @@ input.login{
   color:black;
 }
 .loginhome{
-  /*float: right;*/
-  /*font: 1.5em play, Helvetica, Arial, sans-serif;*/
-  /*font-weight: bold;*/
-  /*border-radius: 10px;*/
-  /*border-color: transparent;*/
-  /*padding: 6px 22px;*/
-  /*letter-spacing: 1px;*/
-  /*margin: 3% 5% 19px;*/
-  /*color: #FFFCEE;*/
-  /*background-color: lawngreen;*/
-  /*text-decoration: none;*/
-  /* float: right; */
-  font: 1.5em play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
@@ -291,19 +279,19 @@ input.login{
   font-weight: bold;
   border-radius: 10px;
   border-color: transparent;
-  padding: 6px 30px;
+  padding: 5px 21px;
   letter-spacing: 1px;
-  /*margin: 64px 65px;*/
   color: #FFFCEE;
   background-color: lawngreen;
-  margin: 0 0 0 40%;
+  margin: 26px 0 0 22%;
+  float: left;
 }
 
 .skip:hover{
   color:lawngreen;
 }
 .skip{
-  float:right;
+  float: left;
   font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   border-radius: 10px;
@@ -312,7 +300,7 @@ input.login{
   letter-spacing: 1px;
   color: #FFFCEE;
   background-color: red;
-  margin: 0 10% 0 0;
+  margin: 27px 0 0 7%;
 }
 
 .answer:hover{
@@ -385,12 +373,13 @@ a:hover{
 }
 
 #beginnerQuestion{
-  font: 2em play, Helvetica, Arial, sans-serif;
-  margin: 37px auto 0;
+  font: 2.3em play, Helvetica, Arial, sans-serif;
+  margin: 17px auto 0;
   letter-spacing: 1px;
   font-weight: bold;
   color: #3A8BCA;
   width: 68%;
+  height: 95px;
 }
 #intermediateQuestion{
   font: 2em play, Helvetica, Arial, sans-serif;
@@ -426,7 +415,7 @@ input[type="radio" ]{
 }
 
 .moveAlong{
-  font: 28px play, Helvetica, Arial, sans-serif;
+  font: 1.87em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
   margin: -38px 4% 0 0;
@@ -456,15 +445,17 @@ a:hover{
 }
 
 .save{
-  padding:66px 0;
+  clear: both;
+  padding: 66px 0;
+  height: 181px;
 }
 
 .animate {
-  font: 32px play, Helvetica, Arial, sans-serif;
+  font: 2.4em play, Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
   color: #FFFCEE;
-  margin: -37px 0 0 10%;
+  margin: 0 0 0 16%;
 }
 
 .badgeSm2{

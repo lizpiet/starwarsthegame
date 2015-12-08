@@ -48,10 +48,11 @@
     </div>
 
     <div>
-        <button type="submit" class="skip" value="skip" ng-click="getQuestion()" >skip</button>
-        <a href="/"></a>
+        <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
+        <a href="/"><button type="submit" class="skip" value="skip" ng-click="getQuestion()">skip</button>
+        </a>
 
-            <button type="button" class="answer" value="answer"  ng-click="checkAnswers()" >answer</button>
+
 
     </div>
 
@@ -66,6 +67,7 @@
         </div>
     </div>
     </div>
+
 <!--{{currentQuestion}}-->
 <h2>{{movieQuote}}</h2>
 <p class="quote">{{person}}</p>
