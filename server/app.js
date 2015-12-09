@@ -108,8 +108,8 @@ app.use('/scoreBoard', scoreBoard);
 //    res.send('Hello! I am on service_app.js server side');
 //});
 
-var server = app.listen(3000, function(){
-        var port = server.address().port;
+var server = app.listen(process.env.PORT || 3000, function(){
+    var port = server.address().port;
         console.log('Server side service_app.js., Listening on port: ', port);
     });
 //
